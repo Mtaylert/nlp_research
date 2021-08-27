@@ -6,8 +6,7 @@ from nltk.corpus import stopwords, twitter_samples
 import re
 from sklearn.utils import shuffle
 from sklearn.model_selection import train_test_split
-from model_setup import padding,create_data_loader
-
+from model_setup import LstmModel
 
 stop_words = set(stopwords.words('english'))
 
@@ -26,21 +25,6 @@ def data_preprocessing(text):
     return text
 
 
-def get_text_int(data):
-    corpus = [word for text in data['clean_tweets'] for word in text.split()]
-    count_words = Counter(corpus)
-    sorted_words = count_words.most_common()
-    vocab_to_int = {w: i + 1 for i, (w, c) in enumerate(sorted_words)}
-
-    tweet_int = []
-    for text in data['clean_tweets']:
-        r = [vocab_to_int[word] for word in text.split()]
-        tweet_int.append(r)
-
-    data['tweet_int'] = tweet_int
-    tweet_len = [len(x) for x in tweet_int]
-    data['tweet_len'] = tweet_len
-    return data,tweet_int
 
 
 
@@ -51,7 +35,16 @@ if __name__ =='__main__':
     data_neg = pd.DataFrame({"target": np.zeros(len(all_negative_tweets)), "text": all_negative_tweets})
     data = shuffle(pd.concat([data_pos, data_neg]))
     data['clean_tweets'] = data['text'].apply(data_preprocessing)
-    data,tweet_int = get_text_int(data)
-    features = padding(tweet_int, 28)
-    X_train,X_test,y_train,y_test = train_test_split(features,data['target'],test_size=.2,random_state=123)
-    print(X_train)
+    sequence_model = LstmModel(text=data['clean_tweets'], max_features=2000, embed_dim=256, lstm_out=324)
+    features = sequence_model.prepare()
+    model = sequence_model.build_model()
+    Y = pd.get_dummies(data['target']).values
+    X_train,X_test, y_train, y_test = train_test_split(features, Y, test_size=.2, random_state=42)
+    batch_size = 32
+    model.fit(X_train, y_train, epochs= 10, batch_size=batch_size, verbose=2)
+    score, acc = model.evaluate(X_test,y_test, verbose=2, batch_size=batch_size)
+    print(score,acc)
+    print('--------------------------------------------------------------')
+
+    tweet = ['United Sates foreign policy is a disaster']
+    sequence_model.inference(tweet, model)
