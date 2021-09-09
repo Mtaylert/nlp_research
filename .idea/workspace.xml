@@ -2,8 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="96f0333a-9892-441e-9b32-54b1bdc0c11e" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/text_generation/Markov_Model/text_preprocess.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NER/NER_Modeling.py" beforeDir="false" afterPath="$PROJECT_DIR$/NER/NER_Modeling.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/text_generation/markov_chain.py" beforeDir="false" afterPath="$PROJECT_DIR$/text_generation/markov_chain.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,18 +36,18 @@
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RunManager">
-    <configuration name="NER_Modeling" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
+    <configuration name="main" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
+      <module name="nlp_research" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="$USER_HOME$/.virtualenvs/nlp_specialization/bin/python" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/NER" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/text_generation/Markov_Model" />
       <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <EXTENSION ID="net.ashald.envfile">
         <option name="IS_ENABLED" value="false" />
@@ -58,7 +59,7 @@
           <ENTRY IS_ENABLED="true" PARSER="runconfig" />
         </ENTRIES>
       </EXTENSION>
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/NER/NER_Modeling.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/text_generation/Markov_Model/main.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -78,6 +79,7 @@
       <updated>1630331941713</updated>
       <workItem from="1630331943266" duration="87000" />
       <workItem from="1630350103668" duration="3831000" />
+      <workItem from="1631194625378" duration="7971000" />
     </task>
     <servers />
   </component>
@@ -85,6 +87,7 @@
     <option name="version" value="3" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/nlp_research$markov_chain.coverage" NAME="main Coverage Results" MODIFIED="1631203594766" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/text_generation/Markov_Model" />
     <SUITE FILE_PATH="coverage/nlp_specialization$NER_Modeling.coverage" NAME="NER_Modeling Coverage Results" MODIFIED="1630369201324" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/NER" />
   </component>
 </project>
