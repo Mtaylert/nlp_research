@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="96f0333a-9892-441e-9b32-54b1bdc0c11e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/text_generation/Markov_Model/text_preprocess.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/text_generation/markov_chain.py" beforeDir="false" afterPath="$PROJECT_DIR$/text_generation/markov_chain.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/text_generation/Markov_Model/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/text_generation/Markov_Model/main.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -79,7 +78,7 @@
       <updated>1630331941713</updated>
       <workItem from="1630331943266" duration="87000" />
       <workItem from="1630350103668" duration="3831000" />
-      <workItem from="1631194625378" duration="7971000" />
+      <workItem from="1631194625378" duration="11810000" />
     </task>
     <servers />
   </component>
@@ -87,7 +86,7 @@
     <option name="version" value="3" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/nlp_research$markov_chain.coverage" NAME="main Coverage Results" MODIFIED="1631203594766" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/text_generation/Markov_Model" />
+    <SUITE FILE_PATH="coverage/nlp_research$markov_chain.coverage" NAME="main Coverage Results" MODIFIED="1631209069334" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/text_generation/Markov_Model" />
     <SUITE FILE_PATH="coverage/nlp_specialization$NER_Modeling.coverage" NAME="NER_Modeling Coverage Results" MODIFIED="1630369201324" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/NER" />
   </component>
 </project>
