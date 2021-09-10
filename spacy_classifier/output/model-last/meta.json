@@ -16,18 +16,49 @@
     "name":null
   },
   "labels":{
+    "tok2vec":[
+
+    ],
     "textcat_multilabel":[
       "positive",
       "negative"
     ]
   },
   "pipeline":[
+    "tok2vec",
     "textcat_multilabel"
   ],
   "components":[
+    "tok2vec",
     "textcat_multilabel"
   ],
   "disabled":[
 
-  ]
+  ],
+  "performance":{
+    "cats_score":0.9246565063,
+    "cats_score_desc":"macro AUC",
+    "cats_micro_p":0.8870451819,
+    "cats_micro_r":0.8874,
+    "cats_micro_f":0.8872225555,
+    "cats_macro_p":0.8361243379,
+    "cats_macro_r":0.7818117044,
+    "cats_macro_f":0.8044097136,
+    "cats_macro_auc":0.9246565063,
+    "cats_f_per_type":{
+      "positive":{
+        "p":0.9100378788,
+        "r":0.95479384,
+        "f":0.9318787879
+      },
+      "negative":{
+        "p":0.7622107969,
+        "r":0.6088295688,
+        "f":0.6769406393
+      }
+    },
+    "cats_macro_auc_per_type":0.0,
+    "tok2vec_loss":0.0,
+    "textcat_multilabel_loss":0.0934735885
+  }
 }
