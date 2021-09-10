@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="96f0333a-9892-441e-9b32-54b1bdc0c11e" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spacy_classifier/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/spacy_classifier/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spacy_classifier/base_config.cfg" beforeDir="false" afterPath="$PROJECT_DIR$/spacy_classifier/base_config.cfg" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -85,7 +86,7 @@
       <updated>1630331941713</updated>
       <workItem from="1630331943266" duration="87000" />
       <workItem from="1630350103668" duration="3831000" />
-      <workItem from="1631194625378" duration="15516000" />
+      <workItem from="1631194625378" duration="15843000" />
     </task>
     <servers />
   </component>
