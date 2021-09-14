@@ -9,7 +9,7 @@ class SpacySetup:
         if spacy_model:
             self.nlp = spacy.load(spacy_model)
         else:
-            self.nlp = spacy.load("en_core_web_sm")
+            self.nlp = spacy.load("en_core_web_trf")
 
         self.data = data
         self.zipped_data = self.zip_dataset()

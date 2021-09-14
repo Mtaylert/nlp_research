@@ -15,6 +15,7 @@ reviews = pd.read_csv(
 reviews = reviews[["Review Text", "Recommended IND"]].dropna()
 
 model = SpacySetup(reviews)
-result = infer_result(model.zipped_data[21002])
-print(result.cats)
-print(model.zipped_data[21002])
+for r in range(20000,21000):
+    result = infer_result(model.zipped_data[r])
+    print(result.cats)
+    print(model.zipped_data[r])
