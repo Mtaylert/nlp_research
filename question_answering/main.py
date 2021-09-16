@@ -1,9 +1,10 @@
 import json
+from typing import Dict, Any
 import pandas as pd
 from collections import defaultdict
 
 
-def unpack_questions(nested_json):
+def unpack_questions(nested_json: Dict[str,Any]) -> Dict[str,Any]:
     unpacked_dict = defaultdict()
     nested_json = nested_json.values[0][0]['qas']
     for line in nested_json:
@@ -17,7 +18,7 @@ def unpack_questions(nested_json):
     return dict(unpacked_dict)
 
 
-def unpack_data(filepath):
+def unpack_data(filepath: str) -> pd.DataFrame:
     with open(filepath) as f:
         data = json.loads(f.read())
 

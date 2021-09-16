@@ -3,10 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="96f0333a-9892-441e-9b32-54b1bdc0c11e" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spacy_classifier/data/train.spacy" beforeDir="false" afterPath="$PROJECT_DIR$/spacy_classifier/data/train.spacy" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spacy_classifier/data/valid.spacy" beforeDir="false" afterPath="$PROJECT_DIR$/spacy_classifier/data/valid.spacy" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spacy_classifier/output/model-best/vocab/strings.json" beforeDir="false" afterPath="$PROJECT_DIR$/spacy_classifier/output/model-best/vocab/strings.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spacy_classifier/output/model-last/vocab/strings.json" beforeDir="false" afterPath="$PROJECT_DIR$/spacy_classifier/output/model-last/vocab/strings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/question_answering/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/question_answering/main.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -89,7 +86,7 @@
       <updated>1630331941713</updated>
       <workItem from="1630331943266" duration="87000" />
       <workItem from="1630350103668" duration="3831000" />
-      <workItem from="1631194625378" duration="34489000" />
+      <workItem from="1631194625378" duration="35153000" />
     </task>
     <servers />
   </component>
@@ -97,7 +94,7 @@
     <option name="version" value="3" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/nlp_research$markov_chain.coverage" NAME="main Coverage Results" MODIFIED="1631739791166" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/question_answering" />
+    <SUITE FILE_PATH="coverage/nlp_research$markov_chain.coverage" NAME="main Coverage Results" MODIFIED="1631739845573" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/question_answering" />
     <SUITE FILE_PATH="coverage/nlp_specialization$NER_Modeling.coverage" NAME="NER_Modeling Coverage Results" MODIFIED="1630369201324" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/NER" />
   </component>
 </project>
