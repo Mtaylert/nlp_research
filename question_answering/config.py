@@ -1,10 +1,11 @@
 import transformers
 
 
-MAX_LEN = 512
-TRAIN_BATCH_SIZE = 10
-VALID_BATCH_SIZE = 5
-EPOCHS =2
+MAX_TOKEN_LEN = 396
+MAX_TARGET_LEN = 32
+TRAIN_BATCH_SIZE = 8
+VALID_BATCH_SIZE = 4
+EPOCHS =3
 T5_PATH = "input/t5-base"
 MODEL_PATH = "output/question_answer_SQUAD_model.bin"
 TRAINING_FILE = "data/train-v2.0.json"
