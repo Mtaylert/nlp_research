@@ -29,7 +29,8 @@ class BuildEncodings:
             self.context,
             self.question,
             truncation=True,
-            padding =True)
+            padding =True,
+        max_length=512)
 
         encodings.update({"start_positions":self.answer_start,
                           "end_positions":self.answer_end})

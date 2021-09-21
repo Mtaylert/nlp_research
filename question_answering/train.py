@@ -19,7 +19,7 @@ def run():
     val_dataset = dataset.BuildDataset(dataset.BuildEncodings(val_df).encode())
 
     train_loader = DataLoader(train_dataset, batch_size=config.TRAIN_BATCH_SIZE, shuffle=True)
-    val_loader = DataLoader(val_dataset, batch_size=config.VALID_BATCH_SIZE, shuffle=True)
+    val_loader = DataLoader(val_dataset, batch_size=config.VALID_BATCH_SIZE)
 
 
     model = DistilBERTQnA()
@@ -45,8 +45,8 @@ def run():
             outputs = model(
                 input_ids=input_ids,
                 attention_mask=attention_mask,
-                start_position=start_positions,
-                end_position = end_positions
+                start_positions=start_positions,
+                end_positions = end_positions
             )
 
             loss = outputs[0]
@@ -57,7 +57,8 @@ def run():
             loop.set_description(f'Epoch {epoch}')
             loop.set_postfix(loss=loss.item())
 
-    model.save_pretrained(config.MODEL_PATH)
+    torch.save(model.state_dict(), config.MODEL_PATH)
+
     print("DONE FINE TUNINING")
 
     model.eval()
@@ -76,7 +77,10 @@ def run():
 
             outputs = model(
                 input_ids=input_ids,
-                attention_mask=attention_mask)
+                attention_mask=attention_mask,
+                start_positions=start_true,
+                end_positions=end_true
+            )
 
             start_pred = torch.argmax(outputs['start_logits'], dim=1)
             end_pred = torch.argmax(outputs['end_logits'], dim=1)
@@ -84,6 +88,8 @@ def run():
             acc.append(((start_pred == start_true).sum()/len(start_pred)).item())
 
             acc.append(((end_pred == end_true).sum() / len(end_pred)).item())
+
+
     print(sum(acc)/len(acc))
 
 

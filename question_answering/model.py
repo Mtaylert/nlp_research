@@ -11,13 +11,13 @@ class DistilBERTQnA(nn.Module):
 
         self.distilbert = transformers.DistilBertForQuestionAnswering.from_pretrained(config.DISTILBERT_PATH)
 
-    def forward(self, input_ids, attention_mask, start_position, end_position):
+    def forward(self, input_ids, attention_mask, start_positions, end_positions):
 
         outputs = self.distilbert(
             input_ids,
-            attention_mask,
-            start_positions=start_position,
-            end_positions=end_position
+            attention_mask = attention_mask,
+            start_positions=start_positions,
+            end_positions=end_positions
         )
         return outputs
 
