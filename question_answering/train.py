@@ -1,12 +1,12 @@
-from torch.utils.data import DataLoader
-from transformers import AdamW
 import torch
+from torch.utils.data import DataLoader
 from tqdm import tqdm
+from transformers import AdamW
 
-from model import DistilBERTQnA
-import dataset
-import data_reader
 import config
+import data_reader
+import dataset
+from model import DistilBERTQnA
 
 
 def run():

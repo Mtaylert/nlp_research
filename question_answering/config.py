@@ -1,6 +1,5 @@
 import transformers
 
-
 MAX_TOKEN_LEN = 384
 MAX_TARGET_LEN = 32
 TRAIN_BATCH_SIZE = 16

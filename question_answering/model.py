@@ -1,8 +1,8 @@
 import torch
+import torch.nn as nn
+import transformers
 
 import config
-import transformers
-import torch.nn as nn
 
 
 class DistilBERTQnA(nn.Module):

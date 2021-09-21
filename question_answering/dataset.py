@@ -1,6 +1,6 @@
 import pandas as pd
-import transformers
 import torch
+import transformers
 
 import config
 import data_reader
