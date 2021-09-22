@@ -2,8 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="96f0333a-9892-441e-9b32-54b1bdc0c11e" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/question_answering/config.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/question_answering/data/dev-v2.0.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/question_answering/data/train-v2.0.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/question_answering/data_reader.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/question_answering/dataset.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/question_answering/model.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/question_answering/train.py" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,7 +50,7 @@
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RunManager">
-    <configuration name="config" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
+    <configuration name="main" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
       <module name="nlp_research" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -52,7 +58,7 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="$USER_HOME$/.virtualenvs/nlp_specialization/bin/python" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/sentiment_analysis/src" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/question_answering/t5QA" />
       <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
@@ -67,7 +73,7 @@
           <ENTRY IS_ENABLED="true" PARSER="runconfig" />
         </ENTRIES>
       </EXTENSION>
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/sentiment_analysis/src/config.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/question_answering/t5QA/main.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -96,6 +102,7 @@
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/nlp_research$markov_chain.coverage" NAME="config Coverage Results" MODIFIED="1631825025067" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/sentiment_analysis/src" />
+    <SUITE FILE_PATH="coverage/nlp_research$train.coverage" NAME="main Coverage Results" MODIFIED="1632341316775" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/question_answering/t5QA" />
     <SUITE FILE_PATH="coverage/nlp_specialization$NER_Modeling.coverage" NAME="NER_Modeling Coverage Results" MODIFIED="1630369201324" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/NER" />
   </component>
 </project>
