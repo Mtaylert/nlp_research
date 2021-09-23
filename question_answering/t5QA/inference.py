@@ -42,9 +42,9 @@ def generate_answer(question):
 if __name__ =='__main__':
 
     val_df = data_reader.unpack_data('data/dev-v2.0.json')
-    example_question = pd.DataFrame.from_dict({"question":'What is the capital of Norway?',
+    example_question = pd.DataFrame.from_dict({"question":'Who is the current president of the United States ?',
                                      "context":"",
-                                     "answer":'Richmond',
+                                     "answer":'Joe Biden',
                                      "answer_start":0,
                                      "answer_end":10},orient='index').T
 

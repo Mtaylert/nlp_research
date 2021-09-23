@@ -1,7 +1,329 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="96f0333a-9892-441e-9b32-54b1bdc0c11e" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NER/NER_Modeling.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/NER/ner_dataset.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/entity_recognition/ner_datasets/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/entity_recognition/ner_datasets/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/entity_recognition/ner_datasets/README.rst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/entity_recognition/ner_datasets/data/AnEM/ATTRIBUTION" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/entity_recognition/ner_datasets/data/AnEM/CONLL-format/data/AnEM.test" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/entity_recognition/ner_datasets/data/AnEM/CONLL-format/data/AnEM.train" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/entity_recognition/ner_datasets/data/AnEM/CONLL-format/docs/corpusconfig.cfg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/entity_recognition/ner_datasets/data/AnEM/CONLL-format/docs/entity-list.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/entity_recognition/ner_datasets/data/AnEM/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/entity_recognition/ner_datasets/data/AnEM/README.rst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/entity_recognition/ner_datasets/data/BBN/CONLL-format/docs/corpusconfig.cfg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/entity_recognition/ner_datasets/data/BBN/CONLL-format/docs/corrections.rst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/entity_recognition/ner_datasets/data/BBN/CONLL-format/docs/entity-list.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/entity_recognition/ner_datasets/data/BBN/CONLL-format/docs/tagset-with_DESC.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/entity_recognition/ner_datasets/data/BBN/CONLL-format/docs/tagset.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/entity_recognition/ner_datasets/data/BBN/CONLL-format/utils/bbn2conll.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/entity_recognition/ner_datasets/data/BBN/README.rst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/entity_recognition/ner_datasets/data/BBN/clean.sh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/entity_recognition/ner_datasets/data/BBN/original_BBN_dataset/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/entity_recognition/ner_datasets/data/BBN/rootadd.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/entity_recognition/ner_datasets/data/BTC/CONLL-format/data/a.conll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/entity_recognition/ner_datasets/data/BTC/CONLL-format/data/b.conll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/entity_recognition/ner_datasets/data/BTC/CONLL-format/data/e.conll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/entity_recognition/ner_datasets/data/BTC/CONLL-format/data/f.conll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/entity_recognition/ner_datasets/data/BTC/CONLL-format/data/g.conll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/entity_recognition/ner_datasets/data/BTC/CONLL-format/data/h.conll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/entity_recognition/ner_datasets/data/BTC/CONLL-format/docs/corpusconfig.cfg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/entity_recognition/ner_datasets/data/BTC/CONLL-format/docs/entity-list.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/entity_recognition/ner_datasets/data/BTC/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/entity_recognition/ner_datasets/data/BTC/NOTE.rst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/entity_recognition/ner_datasets/data/BTC/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/entity_recognition/ner_datasets/data/CADEC/CONLL-format/data_orig/README" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/entity_recognition/ner_datasets/data/CADEC/CONLL-format/docs/corpusconfig.cfg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/entity_recognition/ner_datasets/data/CADEC/CONLL-format/docs/entity-list.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/entity_recognition/ner_datasets/data/CADEC/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/entity_recognition/ner_datasets/data/CADEC/README.rst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/entity_recognition/ner_datasets/data/GUM/CONLL-format/data-by-corpustype/interview/GUM_interview_ants.tsv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/entity_recognition/ner_datasets/data/GUM/CONLL-format/data-by-corpustype/interview/GUM_interview_brotherhood.tsv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/entity_recognition/ner_datasets/data/GUM/CONLL-format/data-by-corpustype/interview/GUM_interview_chomsky.tsv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/entity_recognition/ner_datasets/data/GUM/CONLL-format/data-by-corpustype/interview/GUM_interview_cocktail.tsv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/entity_recognition/ner_datasets/data/GUM/CONLL-format/data-by-corpustype/interview/GUM_interview_cyclone.tsv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/entity_recognition/ner_datasets/data/GUM/CONLL-format/data-by-corpustype/interview/GUM_interview_daly.tsv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/entity_recognition/ner_datasets/data/GUM/CONLL-format/data-by-corpustype/interview/GUM_interview_dungeon.tsv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/entity_recognition/ner_datasets/data/GUM/CONLL-format/data-by-corpustype/interview/GUM_interview_gaming.tsv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/entity_recognition/ner_datasets/data/GUM/CONLL-format/data-by-corpustype/interview/GUM_interview_herrick.tsv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/entity_recognition/ner_datasets/data/GUM/CONLL-format/data-by-corpustype/interview/GUM_interview_hill.tsv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/entity_recognition/ner_datasets/data/GUM/CONLL-format/data-by-corpustype/interview/GUM_interview_libertarian.tsv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/entity_recognition/ner_datasets/data/GUM/CONLL-format/data-by-corpustype/interview/GUM_interview_licen.tsv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/entity_recognition/ner_datasets/data/GUM/CONLL-format/data-by-corpustype/interview/GUM_interview_mcguire.tsv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/entity_recognition/ner_datasets/data/GUM/CONLL-format/data-by-corpustype/interview/GUM_interview_mckenzie.tsv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/entity_recognition/ner_datasets/data/GUM/CONLL-format/data-by-corpustype/interview/GUM_interview_messina.tsv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/entity_recognition/ner_datasets/data/GUM/CONLL-format/data-by-corpustype/interview/GUM_interview_onion.tsv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/entity_recognition/ner_datasets/data/GUM/CONLL-format/data-by-corpustype/interview/GUM_interview_peres.tsv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/entity_recognition/ner_datasets/data/GUM/CONLL-format/data-by-corpustype/interview/GUM_interview_shalev.tsv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/entity_recognition/ner_datasets/data/GUM/CONLL-format/data-by-corpustype/interview/GUM_interview_stardust.tsv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/entity_recognition/ner_datasets/data/GUM/CONLL-format/data-by-corpustype/news/GUM_news_asylum.tsv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/entity_recognition/ner_datasets/data/GUM/CONLL-format/data-by-corpustype/news/GUM_news_clock.tsv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/entity_recognition/ner_datasets/data/GUM/CONLL-format/data-by-corpustype/news/GUM_news_crane.tsv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/entity_recognition/ner_datasets/data/GUM/CONLL-format/data-by-corpustype/news/GUM_news_defector.tsv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/entity_recognition/ner_datasets/data/GUM/CONLL-format/data-by-corpustype/news/GUM_news_election.tsv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/entity_recognition/ner_datasets/data/GUM/CONLL-format/data-by-corpustype/news/GUM_news_expo.tsv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/entity_recognition/ner_datasets/data/GUM/CONLL-format/data-by-corpustype/news/GUM_news_flag.tsv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/entity_recognition/ner_datasets/data/GUM/CONLL-format/data-by-corpustype/news/GUM_news_hackers.tsv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/entity_recognition/ner_datasets/data/GUM/CONLL-format/data-by-corpustype/news/GUM_news_homeopathic.tsv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/entity_recognition/ner_datasets/data/GUM/CONLL-format/data-by-corpustype/news/GUM_news_ie9.tsv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/entity_recognition/ner_datasets/data/GUM/CONLL-format/data-by-corpustype/news/GUM_news_imprisoned.tsv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/entity_recognition/ner_datasets/data/GUM/CONLL-format/data-by-corpustype/news/GUM_news_iodine.tsv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/entity_recognition/ner_datasets/data/GUM/CONLL-format/data-by-corpustype/news/GUM_news_korea.tsv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/entity_recognition/ner_datasets/data/GUM/CONLL-format/data-by-corpustype/news/GUM_news_lanterns.tsv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/entity_recognition/ner_datasets/data/GUM/CONLL-format/data-by-corpustype/news/GUM_news_nasa.tsv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/entity_recognition/ner_datasets/data/GUM/CONLL-format/data-by-corpustype/news/GUM_news_sensitive.tsv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/entity_recognition/ner_datasets/data/GUM/CONLL-format/data-by-corpustype/news/GUM_news_stampede.tsv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/entity_recognition/ner_datasets/data/GUM/CONLL-format/data-by-corpustype/news/GUM_news_taxes.tsv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/entity_recognition/ner_datasets/data/GUM/CONLL-format/data-by-corpustype/news/GUM_news_warhol.tsv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/entity_recognition/ner_datasets/data/GUM/CONLL-format/data-by-corpustype/news/GUM_news_warming.tsv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/entity_recognition/ner_datasets/data/GUM/CONLL-format/data-by-corpustype/news/GUM_news_worship.tsv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/entity_recognition/ner_datasets/data/GUM/CONLL-format/data-by-corpustype/voyage/GUM_voyage_athens.tsv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/entity_recognition/ner_datasets/data/GUM/CONLL-format/data-by-corpustype/voyage/GUM_voyage_chatham.tsv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/entity_recognition/ner_datasets/data/GUM/CONLL-format/data-by-corpustype/voyage/GUM_voyage_cleveland.tsv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/entity_recognition/ner_datasets/data/GUM/CONLL-format/data-by-corpustype/voyage/GUM_voyage_coron.tsv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/entity_recognition/ner_datasets/data/GUM/CONLL-format/data-by-corpustype/voyage/GUM_voyage_cuba.tsv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/entity_recognition/ner_datasets/data/GUM/CONLL-format/data-by-corpustype/voyage/GUM_voyage_fortlee.tsv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/entity_recognition/ner_datasets/data/GUM/CONLL-format/data-by-corpustype/voyage/GUM_voyage_guadeloupe.tsv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/entity_recognition/ner_datasets/data/GUM/CONLL-format/data-by-corpustype/voyage/GUM_voyage_isfahan.tsv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/entity_recognition/ner_datasets/data/GUM/CONLL-format/data-by-corpustype/voyage/GUM_voyage_lodz.tsv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/entity_recognition/ner_datasets/data/GUM/CONLL-format/data-by-corpustype/voyage/GUM_voyage_merida.tsv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/entity_recognition/ner_datasets/data/GUM/CONLL-format/data-by-corpustype/voyage/GUM_voyage_oakland.tsv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/entity_recognition/ner_datasets/data/GUM/CONLL-format/data-by-corpustype/voyage/GUM_voyage_phoenix.tsv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/entity_recognition/ner_datasets/data/GUM/CONLL-format/data-by-corpustype/voyage/GUM_voyage_socotra.tsv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/entity_recognition/ner_datasets/data/GUM/CONLL-format/data-by-corpustype/voyage/GUM_voyage_thailand.tsv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/entity_recognition/ner_datasets/data/GUM/CONLL-format/data-by-corpustype/voyage/GUM_voyage_tulsa.tsv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/entity_recognition/ner_datasets/data/GUM/CONLL-format/data-by-corpustype/voyage/GUM_voyage_vavau.tsv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/entity_recognition/ner_datasets/data/GUM/CONLL-format/data-by-corpustype/voyage/GUM_voyage_york.tsv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/entity_recognition/ner_datasets/data/GUM/CONLL-format/data-by-corpustype/whow/GUM_whow_arrogant.tsv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/entity_recognition/ner_datasets/data/GUM/CONLL-format/data-by-corpustype/whow/GUM_whow_ballet.tsv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/entity_recognition/ner_datasets/data/GUM/CONLL-format/data-by-corpustype/whow/GUM_whow_basil.tsv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/entity_recognition/ner_datasets/data/GUM/CONLL-format/data-by-corpustype/whow/GUM_whow_cactus.tsv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/entity_recognition/ner_datasets/data/GUM/CONLL-format/data-by-corpustype/whow/GUM_whow_chicken.tsv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/entity_recognition/ner_datasets/data/GUM/CONLL-format/data-by-corpustype/whow/GUM_whow_cupcakes.tsv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/entity_recognition/ner_datasets/data/GUM/CONLL-format/data-by-corpustype/whow/GUM_whow_elevator.tsv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/entity_recognition/ner_datasets/data/GUM/CONLL-format/data-by-corpustype/whow/GUM_whow_flirt.tsv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/entity_recognition/ner_datasets/data/GUM/CONLL-format/data-by-corpustype/whow/GUM_whow_glowstick.tsv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/entity_recognition/ner_datasets/data/GUM/CONLL-format/data-by-corpustype/whow/GUM_whow_joke.tsv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/entity_recognition/ner_datasets/data/GUM/CONLL-format/data-by-corpustype/whow/GUM_whow_languages.tsv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/entity_recognition/ner_datasets/data/GUM/CONLL-format/data-by-corpustype/whow/GUM_whow_mice.tsv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/entity_recognition/ner_datasets/data/GUM/CONLL-format/data-by-corpustype/whow/GUM_whow_overalls.tsv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/entity_recognition/ner_datasets/data/GUM/CONLL-format/data-by-corpustype/whow/GUM_whow_packing.tsv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/entity_recognition/ner_datasets/data/GUM/CONLL-format/data-by-corpustype/whow/GUM_whow_parachute.tsv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/entity_recognition/ner_datasets/data/GUM/CONLL-format/data-by-corpustype/whow/GUM_whow_procrastinating.tsv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/entity_recognition/ner_datasets/data/GUM/CONLL-format/data-by-corpustype/whow/GUM_whow_quidditch.tsv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/entity_recognition/ner_datasets/data/GUM/CONLL-format/data-by-corpustype/whow/GUM_whow_quinoa.tsv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/entity_recognition/ner_datasets/data/GUM/CONLL-format/data-by-corpustype/whow/GUM_whow_skittles.tsv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/entity_recognition/ner_datasets/data/GUM/CONLL-format/data/test/gum-test.conll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/entity_recognition/ner_datasets/data/GUM/CONLL-format/data/train/gum-train.conll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/entity_recognition/ner_datasets/data/GUM/CONLL-format/docs-train-test/corpusconfig.cfg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/entity_recognition/ner_datasets/data/GUM/CONLL-format/docs/corpusconfig.cfg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/entity_recognition/ner_datasets/data/GUM/CONLL-format/docs/entity-list.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/entity_recognition/ner_datasets/data/GUM/CONLL-format/utils/webAnnotsv_to_conll.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/entity_recognition/ner_datasets/data/GUM/LICENSE.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/entity_recognition/ner_datasets/data/GUM/README.rst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/entity_recognition/ner_datasets/data/MITMovieCorpus/CONLL-format/trivia10k13/data/test/README" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/entity_recognition/ner_datasets/data/MITMovieCorpus/CONLL-format/trivia10k13/data/train/README" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/entity_recognition/ner_datasets/data/MITMovieCorpus/CONLL-format/trivia10k13/docs/corpusconfig.cfg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/entity_recognition/ner_datasets/data/MITMovieCorpus/CONLL-format/trivia10k13/docs/entity-list.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/entity_recognition/ner_datasets/data/MITMovieCorpus/README.rst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/entity_recognition/ner_datasets/data/MITRestaurantCorpus/CONLL-format/data/test/README" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/entity_recognition/ner_datasets/data/MITRestaurantCorpus/CONLL-format/data/train/README" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/entity_recognition/ner_datasets/data/MITRestaurantCorpus/CONLL-format/docs/corpusconfig.cfg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/entity_recognition/ner_datasets/data/MITRestaurantCorpus/CONLL-format/docs/entity-list.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/entity_recognition/ner_datasets/data/MITRestaurantCorpus/README.rst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/entity_recognition/ner_datasets/data/MUC-6/CONLL-format/data/test/README" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/entity_recognition/ner_datasets/data/MUC-6/CONLL-format/data/train/README" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/entity_recognition/ner_datasets/data/MUC-6/CONLL-format/docs/corpusconfig.cfg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/entity_recognition/ner_datasets/data/MUC-6/CONLL-format/docs/entity-list.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/entity_recognition/ner_datasets/data/MUC-6/README.rst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/entity_recognition/ner_datasets/data/MalwareTextDB/CONLL-format/data/README" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/entity_recognition/ner_datasets/data/MalwareTextDB/CONLL-format/docs/corpusconfig.cfg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/entity_recognition/ner_datasets/data/MalwareTextDB/CONLL-format/docs/entity-list.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/entity_recognition/ner_datasets/data/MalwareTextDB/README.rst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/entity_recognition/ner_datasets/data/NIST_IEER/CONLL-format/data/README" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/entity_recognition/ner_datasets/data/NIST_IEER/CONLL-format/docs/corpusconfig.cfg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/entity_recognition/ner_datasets/data/NIST_IEER/CONLL-format/docs/entity-list.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/entity_recognition/ner_datasets/data/NIST_IEER/CONLL-format/utils/makeconll.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/entity_recognition/ner_datasets/data/NIST_IEER/CONLL-format/utils/quick_comma_fix.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/entity_recognition/ner_datasets/data/NIST_IEER/README.rst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/entity_recognition/ner_datasets/data/Ritter/CONLL-format/data/dev/README" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/entity_recognition/ner_datasets/data/Ritter/CONLL-format/data/test/README" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/entity_recognition/ner_datasets/data/Ritter/CONLL-format/data/train/README" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/entity_recognition/ner_datasets/data/Ritter/CONLL-format/docs/corpusconfig.cfg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/entity_recognition/ner_datasets/data/Ritter/CONLL-format/docs/entity-list.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/entity_recognition/ner_datasets/data/Ritter/README.rst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/entity_recognition/ner_datasets/data/SEC-filings/CONLL-format/data/test/FIN3.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/entity_recognition/ner_datasets/data/SEC-filings/CONLL-format/data/train/FIN5.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/entity_recognition/ner_datasets/data/SEC-filings/CONLL-format/docs/corpusconfig.cfg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/entity_recognition/ner_datasets/data/SEC-filings/CONLL-format/docs/entity-list.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/entity_recognition/ner_datasets/data/SEC-filings/NOTE.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/entity_recognition/ner_datasets/data/SEC-filings/README.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/entity_recognition/ner_datasets/data/WNUT17/CITATION" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/entity_recognition/ner_datasets/data/WNUT17/CONLL-format/data/dev/emerging.dev.conll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/entity_recognition/ner_datasets/data/WNUT17/CONLL-format/data/test/emerging.test.annotated" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/entity_recognition/ner_datasets/data/WNUT17/CONLL-format/data/train/wnut17train.conll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/entity_recognition/ner_datasets/data/WNUT17/CONLL-format/docs/corpusconfig.cfg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/entity_recognition/ner_datasets/data/WNUT17/CONLL-format/docs/entity-list.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/entity_recognition/ner_datasets/data/WNUT17/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/entity_recognition/ner_datasets/data/WNUT17/README.rst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/entity_recognition/ner_datasets/data/conll2003/CONLL-format/data/README" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/entity_recognition/ner_datasets/data/conll2003/CONLL-format/docs/corpusconfig.cfg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/entity_recognition/ner_datasets/data/conll2003/CONLL-format/docs/entity-list.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/entity_recognition/ner_datasets/data/conll2003/README.rst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/entity_recognition/ner_datasets/data/gmb/gmb-1.0.0/CONLL-format/data_original/README" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/entity_recognition/ner_datasets/data/gmb/gmb-1.0.0/CONLL-format/docs/corpusconfig.cfg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/entity_recognition/ner_datasets/data/gmb/gmb-1.0.0/CONLL-format/docs/entity-list.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/entity_recognition/ner_datasets/data/gmb/gmb-1.0.0/README.rst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/entity_recognition/ner_datasets/data/i2b2_2006/CONLL-format/data/test/README" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/entity_recognition/ner_datasets/data/i2b2_2006/CONLL-format/data/train/README" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/entity_recognition/ner_datasets/data/i2b2_2006/CONLL-format/docs/corpusconfig.cfg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/entity_recognition/ner_datasets/data/i2b2_2006/CONLL-format/docs/entity-list.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/entity_recognition/ner_datasets/data/i2b2_2006/CONLL-format/utils/i2b2toconll.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/entity_recognition/ner_datasets/data/i2b2_2006/README.rst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/entity_recognition/ner_datasets/data/i2b2_2014/CONLL-format/data/dev/README" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/entity_recognition/ner_datasets/data/i2b2_2014/CONLL-format/data/test/README" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/entity_recognition/ner_datasets/data/i2b2_2014/CONLL-format/data/train/README" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/entity_recognition/ner_datasets/data/i2b2_2014/CONLL-format/docs/corpusconfig.cfg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/entity_recognition/ner_datasets/data/i2b2_2014/CONLL-format/docs/entity-list.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/entity_recognition/ner_datasets/data/i2b2_2014/README.rst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/entity_recognition/ner_datasets/data/re3d/CONLL-format/data-by-source/conll/Australian_Department_of_Foreign_Affairs/2FA0B45CA064AF09334944B6D68B5987.conll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/entity_recognition/ner_datasets/data/re3d/CONLL-format/data-by-source/conll/Australian_Department_of_Foreign_Affairs/58A3656BDCA7B89C38CE5A1985834740.conll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/entity_recognition/ner_datasets/data/re3d/CONLL-format/data-by-source/conll/Australian_Department_of_Foreign_Affairs/D863D678C3A4BD8EDFCE2B7D27881974.conll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/entity_recognition/ner_datasets/data/re3d/CONLL-format/data-by-source/conll/Australian_Department_of_Foreign_Affairs/DEC7A9B44536B3E01C85E64BAF2E07A6.conll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/entity_recognition/ner_datasets/data/re3d/CONLL-format/data-by-source/conll/BBC_Online/3095FB15AFF7B552702E9EF46C083FDD.conll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/entity_recognition/ner_datasets/data/re3d/CONLL-format/data-by-source/conll/BBC_Online/55AE94FC6D11B6BC1A89A144F6BA49FF.conll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/entity_recognition/ner_datasets/data/re3d/CONLL-format/data-by-source/conll/BBC_Online/62A11A900C2139D329C5F0E29B0B2AC4.conll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/entity_recognition/ner_datasets/data/re3d/CONLL-format/data-by-source/conll/BBC_Online/A0302EA7B1BDE005835BC09ECBF2930A.conll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/entity_recognition/ner_datasets/data/re3d/CONLL-format/data-by-source/conll/BBC_Online/A575C2B05115236A223DBE644F73BE9A.conll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/entity_recognition/ner_datasets/data/re3d/CONLL-format/data-by-source/conll/BBC_Online/AEBFCD2500E5B57C7C416020C270EA5A.conll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/entity_recognition/ner_datasets/data/re3d/CONLL-format/data-by-source/conll/BBC_Online/DC40EB7B4BDB1254DAF8A430A8E5383B.conll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/entity_recognition/ner_datasets/data/re3d/CONLL-format/data-by-source/conll/BBC_Online/DDC23537DF2DA27754B9327683DCA114.conll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/entity_recognition/ner_datasets/data/re3d/CONLL-format/data-by-source/conll/CENTCOM/001C9C3F3DFE16B4921B1E906F66E161.conll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/entity_recognition/ner_datasets/data/re3d/CONLL-format/data-by-source/conll/CENTCOM/1B05F2376ED66CA9FFEB00BE752C16DC.conll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/entity_recognition/ner_datasets/data/re3d/CONLL-format/data-by-source/conll/CENTCOM/26CC32861EF7D38FBAE9CABAFC7487E1.conll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/entity_recognition/ner_datasets/data/re3d/CONLL-format/data-by-source/conll/CENTCOM/28829CF80D445874061C5948E6A3751D.conll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/entity_recognition/ner_datasets/data/re3d/CONLL-format/data-by-source/conll/CENTCOM/482C10613016D2F430C464B2D13A8F41.conll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/entity_recognition/ner_datasets/data/re3d/CONLL-format/data-by-source/conll/CENTCOM/5FBCC6E1D5B4B2A699196670789C6B0B.conll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/entity_recognition/ner_datasets/data/re3d/CONLL-format/data-by-source/conll/CENTCOM/6646F63F6AC6B483D15DA258CB182147.conll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/entity_recognition/ner_datasets/data/re3d/CONLL-format/data-by-source/conll/CENTCOM/6874F49C56340E2BD65BF958916C97AE.conll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/entity_recognition/ner_datasets/data/re3d/CONLL-format/data-by-source/conll/CENTCOM/68A04D0D3111DBD88DE961B5727ADFA4.conll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/entity_recognition/ner_datasets/data/re3d/CONLL-format/data-by-source/conll/CENTCOM/6B183780227A18218A12E917A5BC8654.conll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/entity_recognition/ner_datasets/data/re3d/CONLL-format/data-by-source/conll/CENTCOM/76957901E4278B498901454FA209CFFA.conll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/entity_recognition/ner_datasets/data/re3d/CONLL-format/data-by-source/conll/CENTCOM/8BC6B4D334BC5607D97A1BA18854B513.conll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/entity_recognition/ner_datasets/data/re3d/CONLL-format/data-by-source/conll/CENTCOM/B2E5F55F5D7E31B291D9F76E8E4AC75D.conll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/entity_recognition/ner_datasets/data/re3d/CONLL-format/data-by-source/conll/CENTCOM/C044623AD872323AF717F26F21E9352B.conll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/entity_recognition/ner_datasets/data/re3d/CONLL-format/data-by-source/conll/CENTCOM/D21D5CC3C9BEF5BF1D44976154E580A5.conll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/entity_recognition/ner_datasets/data/re3d/CONLL-format/data-by-source/conll/CENTCOM/D52939C747F4DB8D1ECF6D415559ADA0.conll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/entity_recognition/ner_datasets/data/re3d/CONLL-format/data-by-source/conll/CENTCOM/E19357552CAE0E45EE364E60A317AC59.conll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/entity_recognition/ner_datasets/data/re3d/CONLL-format/data-by-source/conll/CENTCOM/E50B8563BB8395102D95333699FF73A3.conll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/entity_recognition/ner_datasets/data/re3d/CONLL-format/data-by-source/conll/CENTCOM/E9035FF1D0DA74A11674C82688C05C51.conll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/entity_recognition/ner_datasets/data/re3d/CONLL-format/data-by-source/conll/CENTCOM/F5B5E86320A4E95E92A7EA2FB8E8B484.conll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/entity_recognition/ner_datasets/data/re3d/CONLL-format/data-by-source/conll/CENTCOM/F7893F2F4E38C8E00C7D22E22E100428.conll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/entity_recognition/ner_datasets/data/re3d/CONLL-format/data-by-source/conll/CENTCOM/F7AC57DBBAD0284C8C0DE6566B9B5C29.conll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/entity_recognition/ner_datasets/data/re3d/CONLL-format/data-by-source/conll/CENTCOM/FEB7BC61C9765C9859F46B9B634F039F.conll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/entity_recognition/ner_datasets/data/re3d/CONLL-format/data-by-source/conll/Delegation_of_the_European_Union_to_Syria/26E0189E3D774CB2B8F078A082E5088C.conll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/entity_recognition/ner_datasets/data/re3d/CONLL-format/data-by-source/conll/Delegation_of_the_European_Union_to_Syria/8BF4B60AA80B0601BE12F0164E2E7001.conll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/entity_recognition/ner_datasets/data/re3d/CONLL-format/data-by-source/conll/UK_Government/09FF200CBB76594D688F8EB565717543.conll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/entity_recognition/ner_datasets/data/re3d/CONLL-format/data-by-source/conll/UK_Government/1101048768E50FA1F8DA3F7B7CD105AB.conll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/entity_recognition/ner_datasets/data/re3d/CONLL-format/data-by-source/conll/UK_Government/1563238E6CF89746FDD44909F11EE319.conll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/entity_recognition/ner_datasets/data/re3d/CONLL-format/data-by-source/conll/UK_Government/1718A3656CA87E3826A28BC3D041F024.conll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/entity_recognition/ner_datasets/data/re3d/CONLL-format/data-by-source/conll/UK_Government/189862CF0AC0BBFA012D27D85CE90BE7.conll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/entity_recognition/ner_datasets/data/re3d/CONLL-format/data-by-source/conll/UK_Government/208C0A8E536C75AB9D151D7030276BE9.conll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/entity_recognition/ner_datasets/data/re3d/CONLL-format/data-by-source/conll/UK_Government/32AACD4CCB88ACB2C0FAB156E7BDCC2F.conll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/entity_recognition/ner_datasets/data/re3d/CONLL-format/data-by-source/conll/UK_Government/33A216AD3A006BFF03390675E6C56594.conll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/entity_recognition/ner_datasets/data/re3d/CONLL-format/data-by-source/conll/UK_Government/3A7EC63500380D5B35C211D4FF5E20EA.conll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/entity_recognition/ner_datasets/data/re3d/CONLL-format/data-by-source/conll/UK_Government/6CB38F21A7E71AD4FD0044E4FCE78F52.conll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/entity_recognition/ner_datasets/data/re3d/CONLL-format/data-by-source/conll/UK_Government/7064D852A8BF7FB8126978D3AC40E4FC.conll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/entity_recognition/ner_datasets/data/re3d/CONLL-format/data-by-source/conll/UK_Government/7148F3D092DA3E560332528D7167DF0F.conll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/entity_recognition/ner_datasets/data/re3d/CONLL-format/data-by-source/conll/UK_Government/74E7DCD5876B4EF1E95448F0E0C073CD.conll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/entity_recognition/ner_datasets/data/re3d/CONLL-format/data-by-source/conll/UK_Government/78C6FA20C3559F23A36974F2B22BC73A.conll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/entity_recognition/ner_datasets/data/re3d/CONLL-format/data-by-source/conll/UK_Government/821F5BBD9F50DD7301C12ECCC926B00C.conll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/entity_recognition/ner_datasets/data/re3d/CONLL-format/data-by-source/conll/UK_Government/85F0CF36CAEE839799563350B30B96B1.conll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/entity_recognition/ner_datasets/data/re3d/CONLL-format/data-by-source/conll/UK_Government/8A716D1B7D81B723DFD8361BAEA100DC.conll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/entity_recognition/ner_datasets/data/re3d/CONLL-format/data-by-source/conll/UK_Government/8B3BA274503F6D30F7E80C41E7568744.conll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/entity_recognition/ner_datasets/data/re3d/CONLL-format/data-by-source/conll/UK_Government/AB37B1171B0A38B24A6B74B18903E8D5.conll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/entity_recognition/ner_datasets/data/re3d/CONLL-format/data-by-source/conll/UK_Government/C35F45FE7CBA87AE07646066842C91E0.conll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/entity_recognition/ner_datasets/data/re3d/CONLL-format/data-by-source/conll/UK_Government/C3BB2D0EE548765402C961463415E4CA.conll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/entity_recognition/ner_datasets/data/re3d/CONLL-format/data-by-source/conll/UK_Government/C66A9E77E1142C3F0909657DDDD475A5.conll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/entity_recognition/ner_datasets/data/re3d/CONLL-format/data-by-source/conll/UK_Government/CBD73D24324D3C3A3A76AC430E05A069.conll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/entity_recognition/ner_datasets/data/re3d/CONLL-format/data-by-source/conll/UK_Government/D23AD6D80730BEF27D23CDD2287AC200.conll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/entity_recognition/ner_datasets/data/re3d/CONLL-format/data-by-source/conll/UK_Government/E967805EB658EB937216A53EE9733656.conll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/entity_recognition/ner_datasets/data/re3d/CONLL-format/data-by-source/conll/UK_Government/ED9C03D12FCA518C78DD6C3909CA5E42.conll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/entity_recognition/ner_datasets/data/re3d/CONLL-format/data-by-source/conll/US_State_Department/108A8CFC05CC3139A6E65B7A4239F5C6.conll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/entity_recognition/ner_datasets/data/re3d/CONLL-format/data-by-source/conll/US_State_Department/1E4938BF59D806C4E3AC9DDF2CC3E87F.conll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/entity_recognition/ner_datasets/data/re3d/CONLL-format/data-by-source/conll/US_State_Department/1F9A1D68D16594512C9CBAD02D53E4C1.conll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/entity_recognition/ner_datasets/data/re3d/CONLL-format/data-by-source/conll/US_State_Department/204532F7EDD22A40E15407ADA16AC058.conll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/entity_recognition/ner_datasets/data/re3d/CONLL-format/data-by-source/conll/US_State_Department/2C271BB862754AECF35665280FE7B93C.conll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/entity_recognition/ner_datasets/data/re3d/CONLL-format/data-by-source/conll/US_State_Department/2C6CB502FAD51B6B4CA765E57E221BEA.conll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/entity_recognition/ner_datasets/data/re3d/CONLL-format/data-by-source/conll/US_State_Department/2E857EFC55A390B6382FDE5C87F06D67.conll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/entity_recognition/ner_datasets/data/re3d/CONLL-format/data-by-source/conll/US_State_Department/31E63458C6BF8F6F1D50D7041E5B89C9.conll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/entity_recognition/ner_datasets/data/re3d/CONLL-format/data-by-source/conll/US_State_Department/340238F0CEF0581CBBA9106FFB2EA97C.conll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/entity_recognition/ner_datasets/data/re3d/CONLL-format/data-by-source/conll/US_State_Department/4174EF50EF8D9024BCC261D602202738.conll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/entity_recognition/ner_datasets/data/re3d/CONLL-format/data-by-source/conll/US_State_Department/487C0B93A959D64A34CA2F40EE82C18B.conll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/entity_recognition/ner_datasets/data/re3d/CONLL-format/data-by-source/conll/US_State_Department/6413ED35E27EFB504C689047F2F17B0F.conll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/entity_recognition/ner_datasets/data/re3d/CONLL-format/data-by-source/conll/US_State_Department/6E62DC65EFDFB1B357175EB255F25C36.conll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/entity_recognition/ner_datasets/data/re3d/CONLL-format/data-by-source/conll/US_State_Department/8EC0382F2D0E4360EC7A85FA8FEA02D8.conll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/entity_recognition/ner_datasets/data/re3d/CONLL-format/data-by-source/conll/US_State_Department/9104BDCC8E9A1CD2090757B487421DC6.conll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/entity_recognition/ner_datasets/data/re3d/CONLL-format/data-by-source/conll/US_State_Department/9DFBD0B607245D1B56B90FD64E9AB952.conll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/entity_recognition/ner_datasets/data/re3d/CONLL-format/data-by-source/conll/US_State_Department/B5E6AB37F9BF98EC2A4EFDDACE2768C9.conll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/entity_recognition/ner_datasets/data/re3d/CONLL-format/data-by-source/conll/US_State_Department/C02FDFE461425ED8B64B982D05BD2D62.conll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/entity_recognition/ner_datasets/data/re3d/CONLL-format/data-by-source/conll/US_State_Department/CFEF9B4E83786F435E8483A03DB20D8E.conll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/entity_recognition/ner_datasets/data/re3d/CONLL-format/data-by-source/conll/US_State_Department/E1526BBD89FAB8E7914B3CF5867666CC.conll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/entity_recognition/ner_datasets/data/re3d/CONLL-format/data-by-source/conll/US_State_Department/F669C19A4C3DB410BBEC57ECC5DC62B1.conll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/entity_recognition/ner_datasets/data/re3d/CONLL-format/data-by-source/conll/US_State_Department/FAB032C0995F606F54B1DD3EA8D61930.conll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/entity_recognition/ner_datasets/data/re3d/CONLL-format/data-by-source/conll/Wikipedia/0388FEF6427DE0223688EB04A8DA71E1.conll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/entity_recognition/ner_datasets/data/re3d/CONLL-format/data-by-source/conll/Wikipedia/051A4176702090F39056F34A9C29D574.conll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/entity_recognition/ner_datasets/data/re3d/CONLL-format/data-by-source/conll/Wikipedia/22BCFA25729AF03473435DAAAE67F5B8.conll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/entity_recognition/ner_datasets/data/re3d/CONLL-format/data-by-source/conll/Wikipedia/2B0DB9AA5ACC73214D2C69C20AA734A8.conll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/entity_recognition/ner_datasets/data/re3d/CONLL-format/data-by-source/conll/Wikipedia/2ED27E1CBF9EFDEF369E721DC948D2F4.conll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/entity_recognition/ner_datasets/data/re3d/CONLL-format/data-by-source/conll/Wikipedia/3B6F5E49DF05198FD982806C6CA1591C.conll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/entity_recognition/ner_datasets/data/re3d/CONLL-format/data-by-source/conll/Wikipedia/76F75D985AD7642B43A8AA4DBC146621.conll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/entity_recognition/ner_datasets/data/re3d/CONLL-format/data-by-source/conll/Wikipedia/774684266A20284937043C2BC997EC3B.conll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/entity_recognition/ner_datasets/data/re3d/CONLL-format/data-by-source/conll/Wikipedia/7EA8D40D4CBE1191B91C9B3503A07338.conll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/entity_recognition/ner_datasets/data/re3d/CONLL-format/data-by-source/conll/Wikipedia/99036C6E6DB96D33FA0830D3095E7B71.conll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/entity_recognition/ner_datasets/data/re3d/CONLL-format/data-by-source/conll/Wikipedia/B7CAC5946BE12615BA4815FFE0FE4C54.conll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/entity_recognition/ner_datasets/data/re3d/CONLL-format/data-by-source/conll/Wikipedia/BC4D46232E91E65C8C69F4F6F2D9C618.conll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/entity_recognition/ner_datasets/data/re3d/CONLL-format/data-by-source/conll/Wikipedia/FD93899C448B33796DBBB7BBFEEFA3A6.conll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/entity_recognition/ner_datasets/data/re3d/CONLL-format/data/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/entity_recognition/ner_datasets/data/re3d/CONLL-format/data/test/re3d-test.conll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/entity_recognition/ner_datasets/data/re3d/CONLL-format/data/train/re3d-train.conll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/entity_recognition/ner_datasets/data/re3d/CONLL-format/docs/corpusconfig.cfg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/entity_recognition/ner_datasets/data/re3d/CONLL-format/docs/entity-list.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/entity_recognition/ner_datasets/data/re3d/CONLL-format/utils/re3d_to_bratann.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/entity_recognition/ner_datasets/data/re3d/LICENSES/Australian_Department_of_Foreign_Affairs/ATTRIBUTION" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/entity_recognition/ner_datasets/data/re3d/LICENSES/Australian_Department_of_Foreign_Affairs/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/entity_recognition/ner_datasets/data/re3d/LICENSES/BBC_Online/ATTRIBUTION" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/entity_recognition/ner_datasets/data/re3d/LICENSES/BBC_Online/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/entity_recognition/ner_datasets/data/re3d/LICENSES/CENTCOM/ATTRIBUTION" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/entity_recognition/ner_datasets/data/re3d/LICENSES/CENTCOM/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/entity_recognition/ner_datasets/data/re3d/LICENSES/Delegation_of_the_European_Union_to_Syria/ATTRIBUTION" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/entity_recognition/ner_datasets/data/re3d/LICENSES/Delegation_of_the_European_Union_to_Syria/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/entity_recognition/ner_datasets/data/re3d/LICENSES/README" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/entity_recognition/ner_datasets/data/re3d/LICENSES/UK_Government/ATTRIBUTION" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/entity_recognition/ner_datasets/data/re3d/LICENSES/UK_Government/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/entity_recognition/ner_datasets/data/re3d/LICENSES/US_State_Department/ATTRIBUTION" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/entity_recognition/ner_datasets/data/re3d/LICENSES/US_State_Department/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/entity_recognition/ner_datasets/data/re3d/LICENSES/Wikipedia/ATTRIBUTION" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/entity_recognition/ner_datasets/data/re3d/LICENSES/Wikipedia/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/entity_recognition/ner_datasets/data/re3d/README.rst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/entity_recognition/ner_datasets/data/wikigold/CONLL-format/data/wikigold.conll.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/entity_recognition/ner_datasets/data/wikigold/CONLL-format/docs/corpusconfig.cfg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/entity_recognition/ner_datasets/data/wikigold/CONLL-format/docs/entity-list.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/entity_recognition/ner_datasets/data/wikigold/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/entity_recognition/ner_datasets/data/wikigold/README.rst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/entity_recognition/ner_datasets/requirements.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/entity_recognition/ner_datasets/src/file_locations.cfg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/entity_recognition/ner_datasets/src/sentence_utils.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/entity_recognition/ner_datasets/src/stratified_split.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/entity_recognition/ner_datasets/src/utils.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/question_answering/t5QA/inference.py" beforeDir="false" afterPath="$PROJECT_DIR$/question_answering/t5QA/inference.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -43,7 +365,7 @@
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RunManager">
-    <configuration name="inference" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
+    <configuration name="model" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
       <module name="nlp_research" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -51,7 +373,7 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="$USER_HOME$/.virtualenvs/nlp_specialization/bin/python" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/question_answering/t5QA" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/entity_recognition" />
       <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
@@ -66,7 +388,7 @@
           <ENTRY IS_ENABLED="true" PARSER="runconfig" />
         </ENTRIES>
       </EXTENSION>
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/question_answering/t5QA/inference.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/entity_recognition/model.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -96,6 +418,7 @@
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/nlp_research$markov_chain.coverage" NAME="config Coverage Results" MODIFIED="1631825025067" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/sentiment_analysis/src" />
     <SUITE FILE_PATH="coverage/nlp_research$train.coverage" NAME="main Coverage Results" MODIFIED="1632341316775" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/question_answering/t5QA" />
+    <SUITE FILE_PATH="coverage/nlp_research$inference.coverage" NAME="data_module Coverage Results" MODIFIED="1632414991843" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/entity_recognition" />
     <SUITE FILE_PATH="coverage/nlp_research$main.coverage" NAME="inference Coverage Results" MODIFIED="1632396181613" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/question_answering/t5QA" />
     <SUITE FILE_PATH="coverage/nlp_specialization$NER_Modeling.coverage" NAME="NER_Modeling Coverage Results" MODIFIED="1630369201324" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/NER" />
   </component>

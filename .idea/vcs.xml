@@ -2,6 +2,10 @@
 <project version="4">
   <component name="VcsDirectoryMappings">
     <mapping directory="$PROJECT_DIR$" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/entity_recognition/entity-recognition-datasets" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/entity_recognition/input/bert-base-uncased" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/entity_recognition/ner_datasets" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/question_answering/t5QA/input/t5-base" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/sentiment_analysis/input/bert-base-uncased" vcs="Git" />
   </component>
 </project>
