@@ -42,8 +42,8 @@ def generate_answer(question):
 if __name__ =='__main__':
 
     val_df = data_reader.unpack_data('data/dev-v2.0.json')
-    example_question = pd.DataFrame.from_dict({"question":'What is the capital of Virginia?',
-                                     "context":"This state capital of Richmond has 225000 people living in it.",
+    example_question = pd.DataFrame.from_dict({"question":'What is the capital of Norway?',
+                                     "context":"",
                                      "answer":'Richmond',
                                      "answer_start":0,
                                      "answer_end":10},orient='index').T
