@@ -24,17 +24,19 @@ class BiLSTMCRF(nn.Module):
 
 
     def forward(self, input_ids, tags, token_type_ids=None, attention_mask=None):
-        outputs = self.bert(input_ids = input_ids, attention_mask=attention_mask, token_type_ids=token_type_ids)
+        outputs = self.bert(input_ids, token_type_ids=token_type_ids, attention_mask=attention_mask)
+        sequence_output = outputs[0]
 
-        sequence_outputs =  self.LSTM(outputs[0])
-        sequence_output = self.dropout(sequence_outputs[0])
-        logits = self.hidden2tag(sequence_output)
-        return logits
+        sequence_output, _ = self.LSTM(sequence_output)
 
-    def predict(self, input_ids, token_type_ids = None, attention_mask=None):
-        logits = self.forward(input_ids=input_ids, attention_mask=attention_mask, token_type_ids=token_type_ids)
-        crf_pred = self.crf.decode(logits, attention_mask.byte())
-        return crf_pred
+        sequence_output = self.dropout(sequence_output)
+        emissions = self.hidden2tag(sequence_output)
+        loss = -1*self.crf(emissions, tags, mask=attention_mask.byte())
+        return loss, emissions
+
+    def predict(self, emissions, attention_mask):
+        return self.crf.decode(emissions, attention_mask.byte())
+
 
 
 

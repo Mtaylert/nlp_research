@@ -11,5 +11,5 @@ TOKENIZER = transformers.BertTokenizer.from_pretrained(
 
 TRAIN_DATA = "ner_datasets/GMB.csv"
 DROPOUT = 0.3
-EMBED_SIZE = 256
-HIDDEN_SIZE = 256
+EMBED_SIZE = 768
+HIDDEN_SIZE = 768
