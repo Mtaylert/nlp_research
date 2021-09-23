@@ -11,7 +11,6 @@ class QAModel(pl.LightningModule):
             config.T5_PATH, return_dict=True
         )
 
-        print(self.model.config)
 
     def forward(self, input_ids, attention_mask, labels=None):
 
