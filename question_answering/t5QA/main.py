@@ -6,7 +6,7 @@ from model import QAModel
 from pytorch_lightning.callbacks import ModelCheckpoint
 
 
-def run():
+def run(train=False):
 
     train_df = data_reader.unpack_data(config.TRAIN_DATA)
     val_df =  data_reader.unpack_data(config.VAL_DATA)
