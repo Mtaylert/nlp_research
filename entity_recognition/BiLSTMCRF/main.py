@@ -1,4 +1,5 @@
 import config
+from typing import BinaryIO
 from model import BiLSTMCRF
 import data_reader
 import data_module
@@ -7,7 +8,7 @@ import transformers
 from sklearn import model_selection
 from tqdm import tqdm
 
-def train():
+def train(save:bool = Fakse) -> dict[str,str]:
 
     sentences, tags, enc = data_reader.process_csv(config.TRAIN_DATA)
     enc_classes = len(enc.classes_)
@@ -40,7 +41,6 @@ def train():
 
     loop = tqdm(train_dataloader)
     for ep in range(config.EPOCHS):
-        final_loss = 0
         for step, batch in enumerate(loop):
             input_ids = batch["ids"]
             mask = batch["mask"]
@@ -63,9 +63,8 @@ def train():
             scheduler.step()
             model.zero_grad()
             final_loss+= loss.item()
-        print(final_loss/len(train_dataloader))
-
-    torch.save(model.state_dict(), config.MODEL_PATH)
+    if save:
+        torch.save(model.state_dict(), config.MODEL_PATH)
 
 
     model.eval()
@@ -97,8 +96,10 @@ def train():
 
 
 
+    cache = {"final_outputs":final_outputs, "final_targets":final_targets,
+             "test_data":val_sent,"test_tags":val_tag,"encoder":enc, "data_module":val_dataloader}
 
-    return final_outputs, final_targets
+    return cache
 
 
 
