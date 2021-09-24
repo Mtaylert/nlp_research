@@ -65,8 +65,7 @@ def train():
             final_loss+= loss.item()
         print(final_loss/len(train_dataloader))
 
-    model_to_save = model.module if hasattr(model, 'module') else model  # Take care of distributed/parallel training
-    model_to_save.save_pretrained(config.MODEL_PATH)
+    torch.save(model.state_dict(), config.MODEL_PATH)
 
 
     model.eval()
@@ -76,7 +75,7 @@ def train():
     final_outputs = []
 
     with torch.no_grad():
-        for step, batch in enumerate(loop):
+        for step, batch in enumerate(val_loop):
             input_ids = batch["ids"]
             mask = batch["mask"]
             token_type_ids = batch["token_type_ids"]
@@ -88,12 +87,13 @@ def train():
             targets = targets.to(device)
 
             loss, emissions = model(input_ids=input_ids, token_type_ids=token_type_ids, attention_mask=mask, tags=targets)
+            final_loss += loss.item()
 
             crf_pred = model.predict(emissions, mask)
 
 
             final_targets.extend(targets.cpu().detach().numpy().tolist())
-            final_outputs.extend(crf_pred.detach().numpy().tolist())
+            final_outputs.extend(crf_pred)
 
 
 
