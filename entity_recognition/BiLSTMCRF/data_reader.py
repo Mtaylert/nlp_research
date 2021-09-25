@@ -1,10 +1,12 @@
+from typing import List
+
 import pandas as pd
 from sklearn import preprocessing
 
 import config
 
 
-def read_corpus(filepath: str):
+def read_corpus(filepath: str) -> (List[str], List[str]):
     sentences, tags = [], []
     sent, tag = ["<START>"], ["<START>"]
     with open(filepath, "r", encoding="utf8") as f:
@@ -24,7 +26,7 @@ def read_corpus(filepath: str):
     return sentences, tags
 
 
-def process_csv(filepath: str):
+def process_csv(filepath: str) -> (List[str], List[str], preprocessing.LabelEncoder):
     enc_tag = preprocessing.LabelEncoder()
     df = (
         pd.read_csv(filepath, encoding="latin-1")

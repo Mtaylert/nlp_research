@@ -1,4 +1,4 @@
-from typing import List
+from typing import Any, Dict, List
 
 import torch
 from torch.utils.data import DataLoader
@@ -8,7 +8,7 @@ import data_reader
 
 
 class BLSTMCRFDataset:
-    def __init__(self, text, target):
+    def __init__(self, text: List[str], target: List[str]):
         self.text = text
         self.target = target
         self.tokenizer = config.TOKENIZER
@@ -17,7 +17,7 @@ class BLSTMCRFDataset:
     def __len__(self):
         return len(self.text)
 
-    def __getitem__(self, idx):
+    def __getitem__(self, idx: int) -> Dict[str, Any]:
         text = self.text[idx]
         tags = self.target[idx]
 

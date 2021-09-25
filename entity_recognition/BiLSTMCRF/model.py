@@ -1,3 +1,5 @@
+from typing import Dict, List, Optional
+
 import torch.nn as nn
 import transformers
 from TorchCRF import CRF
@@ -27,7 +29,13 @@ class BiLSTMCRF(nn.Module):
 
         self.crf = CRF(num_tags, batch_first=True)
 
-    def forward(self, input_ids, tags, token_type_ids=None, attention_mask=None):
+    def forward(
+        self,
+        input_ids,
+        tags,
+        token_type_ids=Optional[List[int]],
+        attention_mask=Optional[List[int]],
+    ) -> (List[float], List[float]):
         outputs = self.bert(
             input_ids, token_type_ids=token_type_ids, attention_mask=attention_mask
         )
@@ -40,5 +48,5 @@ class BiLSTMCRF(nn.Module):
         loss = -1 * self.crf(emissions, tags, mask=attention_mask.byte())
         return loss, emissions
 
-    def predict(self, emissions, attention_mask):
+    def predict(self, emissions: List[float], attention_mask: List[int]) -> List[int]:
         return self.crf.decode(emissions, attention_mask.byte())

@@ -1,3 +1,5 @@
+from typing import Any, Dict
+
 import numpy as np
 import torch
 
@@ -7,7 +9,7 @@ import data_reader
 from model import BiLSTMCRF
 
 
-def infer_input(input_sentence: str):
+def infer_input(input_sentence: str) -> Dict[str, Any]:
 
     enc = data_reader.process_csv(config.TRAIN_DATA)[-1]
 

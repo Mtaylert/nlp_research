@@ -11,7 +11,7 @@ import data_reader
 from model import BiLSTMCRF
 
 
-def train(save: bool = Fakse) -> dict[str, str]:
+def train(save: bool = False) -> dict[str, str]:
 
     sentences, tags, enc = data_reader.process_csv(config.TRAIN_DATA)
     enc_classes = len(enc.classes_)
