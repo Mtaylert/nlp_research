@@ -1,8 +1,10 @@
 from typing import List
-import config
-import data_reader
+
 import torch
 from torch.utils.data import DataLoader
+
+import config
+import data_reader
 
 
 class BLSTMCRFDataset:
@@ -23,17 +25,14 @@ class BLSTMCRFDataset:
         target_tag = []
 
         for i, s in enumerate(text):
-            inputs = config.TOKENIZER.encode(
-                s,
-                add_special_tokens=False
-            )
+            inputs = config.TOKENIZER.encode(s, add_special_tokens=False)
             # abhishek: ab ##hi ##sh ##ek
             input_len = len(inputs)
             ids.extend(inputs)
             target_tag.extend([tags[i]] * input_len)
 
-        ids = ids[:config.MAX_LEN - 2]
-        target_tag = target_tag[:config.MAX_LEN - 2]
+        ids = ids[: config.MAX_LEN - 2]
+        target_tag = target_tag[: config.MAX_LEN - 2]
 
         ids = [101] + ids + [102]
         target_tag = [0] + target_tag + [0]
@@ -48,9 +47,6 @@ class BLSTMCRFDataset:
         token_type_ids = token_type_ids + ([0] * padding_len)
         target_tag = target_tag + ([0] * padding_len)
 
-
-
-
         return {
             "ids": torch.tensor(ids, dtype=torch.long),
             "mask": torch.tensor(mask, dtype=torch.long),
@@ -59,11 +55,9 @@ class BLSTMCRFDataset:
         }
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     train_sent, train_tags = data_reader.process_csv(config.TRAIN_DATA)
-    train_dataset = BLSTMCRFDataset(train_sent,train_tags)
-
-
+    train_dataset = BLSTMCRFDataset(train_sent, train_tags)
 
     for batch in train_dataset:
         print(batch)
