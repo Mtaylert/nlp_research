@@ -2,6 +2,7 @@
 <project version="4">
   <component name="VcsDirectoryMappings">
     <mapping directory="$PROJECT_DIR$" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/entity_recognition/BiLSTMCRF/input/bert-base-uncased" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/entity_recognition/entity-recognition-datasets" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/entity_recognition/input/bert-base-uncased" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/entity_recognition/ner_datasets" vcs="Git" />
