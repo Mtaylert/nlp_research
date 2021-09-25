@@ -43,12 +43,19 @@ def infer_input(input_sentence: str):
     position = np.argmax(probability,axis=1)
     max_probabilities = [probability[idx][pos] for  idx, pos in enumerate(position)]
 
+    token_preds = []
+    for idx, (encoded_word_piece, pred) in enumerate(zip(tokenized_sentence[1:-1],predictions[1:-1])):
+        decoded_word_piece = tokenizer.decode(encoded_word_piece)
+        if decoded_word_piece[0]!='#':
+            token_preds.append(pred)
 
-    cache = {"sentence":input_sentence,"max_probabilities":max_probabilities,'classes':enc.classes_, "predictions":predictions,'probabilities_all':probability}
+
+
+    cache = {"sentence":input_sentence,"max_probabilities":max_probabilities,'classes':enc.classes_, "predictions":token_preds,'probabilities_all':probability}
     return cache
 
 if __name__ == '__main__':
-    sentence = 'My name is Matt and I am from San Diego California'
+    sentence = 'My name is Matt Taylert and I am from Richmond Virginia'
 
     output_cache = infer_input(sentence)
 
