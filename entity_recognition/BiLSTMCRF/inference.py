@@ -70,7 +70,7 @@ def infer_input(input_sentence: str) -> Dict[str, Any]:
 
 
 if __name__ == "__main__":
-    sentence = "My name is Matt Taylert and I am from Richmond Virginia"
+    sentence = "The capitol of France is Paris"
 
     output_cache = infer_input(sentence)
 

@@ -28,4 +28,9 @@ with pdfplumber.open(f'data/pdf/astro-ph0001004.pdf') as pdf:
         print(line)
 
 
+with open('data/ground_truth/astro-ph0001004.body.txt') as f:
+    ground_truth = f.read()
+
+print(ground_truth)
+
 

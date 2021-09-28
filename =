@@ -1,2 +1,0 @@
-Looking in indexes: https://artifactory.int.datarobot.com/artifactory/api/pypi/python-all/simple
-Requirement already satisfied: aiohttp in /Users/matthew/.virtualenvs/nlp_specialization/lib/python3.9/site-packages (3.7.4.post0)
