@@ -1,12 +1,12 @@
 import pandas as pd
-import matplotlib.pyplot as plt
-import cv2 as cv
+from sentence_transformers import SentenceTransformer, util
+import tensorflow as tf
+
 
 train = pd.read_csv('data/train.csv')
-image = train['image'].iloc[1]
-im  = cv.imread(f"data/train_images/{image}")
-plt.imshow(im)
-plt.show()
+model = SentenceTransformer('all-distilroberta-v1')
 
-print(train['title'].iloc[1])
-print(train['label_group'])
+vision_model = tf.keras.applications.VGG16(
+    include_top=False,
+    weights='model_weights/vgg16_weights_tf_dim_ordering_tf_kernels_notop.h5'
+)
