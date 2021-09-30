@@ -3,4 +3,5 @@ entity_recognition/input/*
 question_answering/t5QA/output/*
 question_answering/DistilBERTQA/output/*
 question_answering/DistilBERTQA/input/*
+multimodal/data
 text_generation/data/*
