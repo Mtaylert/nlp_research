@@ -6,6 +6,7 @@ import numpy as np
 from typing import List, Dict
 import config
 from tqdm import tqdm
+import json
 
 
 class TextEmbedder:
@@ -61,9 +62,24 @@ class ImageEmbedder:
         return image_embed_dict
 
 
+def save_concat_embeddings(text_embed_dict: dict, image_embed_dict: dict) -> dict:
+    concatenated_embeds = {}
+    for embedding_key in text_embed_dict:
+        concatenated_embeds[embedding_key] = np.concatenate((text_embed_dict[embedding_key],
+                                                             image_embed_dict[embedding_key]), axis=0)
+
+    with open("output/stored_embeddings.json") as  f:
+        json.dump(concatenated_embeds)
+    print('SAVED')
+
+
+
+
 if __name__ == "__main__":
 
     train = pd.read_csv("data/train.csv")
     text_module = TextEmbedder(text_data=train["title"])
     image_module = ImageEmbedder(image_data=train["image"])
-    print(image_module.image_embedding_dict[0])
+    save_concat_embeddings(text_module.embedding_dict(),
+                                      image_module.image_embedding_dict())
+
