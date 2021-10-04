@@ -1,5 +1,7 @@
 import torch.nn as nn
 import transformers
+
+
 class BERTBaseUncased(nn.Module):
     def __init__(self, num_labels = 4):
         super(BERTBaseUncased, self).__init__()
@@ -10,8 +12,8 @@ class BERTBaseUncased(nn.Module):
                                                       output_attentions=False,
                                                       output_hidden_states=False)
         self.bert_drop = nn.Dropout(0.3)
-        # use 1 because this is binary
-        self.out = nn.Linear(768, 1)
+
+        self.out = nn.Linear(768, self.num_labels)
 
     def forward(self, ids, mask, token_type_ids):
         out1, out2 = self.bert(

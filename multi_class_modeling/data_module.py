@@ -9,14 +9,14 @@ from torch.utils.data import DataLoader, RandomSampler, SequentialSampler
 
 
 class ExampleDataset:
-    def __init__(self, text, target):
+    def __init__(self, text, target, train_flag=True):
         self.text = text
         self.target = target
         self.tokenizer = BertTokenizer.from_pretrained('bert-base-uncased',
                                           do_lower_case=True)
         self.max_len = 256
         self.batch_size = 3
-
+        self.train_flag = train_flag
 
     def __len__(self):
         return len(self.text)
@@ -36,10 +36,14 @@ class ExampleDataset:
                                             encoded_data['attention_mask'],
                                             torch.tensor(self.target))
 
-
-        data_loader =  DataLoader(transformer_dataset,
-                              sampler=RandomSampler(transformer_dataset),
-                              batch_size=self.batch_size)
+        if self.train_flag:
+            data_loader = DataLoader(transformer_dataset,
+                                  sampler=RandomSampler(transformer_dataset),
+                                  batch_size=self.batch_size)
+        else:
+            data_loader = DataLoader(transformer_dataset,
+                                     sampler=SequentialSampler(transformer_dataset),
+                                     batch_size=self.batch_size)
 
         return data_loader
 
