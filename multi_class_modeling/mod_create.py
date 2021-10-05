@@ -10,7 +10,7 @@ from tqdm import tqdm
 
 
 
-def fit(filepath):
+def fit(filepath,save_path):
     bitch_size =32
     epochs = 2
     seed_val = 17
@@ -19,9 +19,10 @@ def fit(filepath):
     torch.manual_seed(seed_val)
     torch.cuda.manual_seed_all(seed_val)
 
-    X_train, X_val, y_train, y_val, enc_tag = main.read_dataset('data.csv')
+    X_train, X_val, y_train, y_val, enc_tag = main.read_dataset(filepath)
 
     train_dataloader= data_module.ExampleDataset(text=X_train, target=y_train, train_flag=True).setup()
+    val_dataloader = data_module.ExampleDataset(text=X_val, target=y_val, train_flag=True).setup()
 
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
@@ -76,11 +77,65 @@ def fit(filepath):
 
 
 
-        torch.save(model.state_dict(), f'finetuned_BERT_epoch_{epoch}.model')
+    torch.save(model.state_dict(), '{}/finetuned_BERT.model'.format(save_path))
 
+    return val_dataloader
+
+
+def predict(val_dataloader,model_filepath):
+
+
+    model = transformers.BertForSequenceClassification.from_pretrained("bert-base-uncased",
+                                                          num_labels=len(enc_tag.classes_),
+                                                          output_attentions=False,
+                                                          output_hidden_states=False)
+
+
+    if torch.cuda.is_available():
+        map_location = lambda storage, loc: storage.cuda()
+    else:
+        map_location = "cpu"
+
+    model.load_state_dict(torch.load(model_filepath, map_location=map_location))
+
+    model.eval()
+
+    loss_val_total = 0
+    predictions, true_vals = [], []
+
+    device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+
+    for batch in val_dataloader:
+        batch = tuple(b.to(device) for b in batch)
+
+        inputs = {'input_ids': batch[0],
+                  'attention_mask': batch[1],
+                  'labels': batch[2],
+                  }
+
+        with torch.no_grad():
+            outputs = model(**inputs)
+
+        loss = outputs[0]
+        logits = outputs[1]
+        loss_val_total += loss.item()
+
+        logits = logits.detach().cpu().numpy()
+        label_ids = inputs['labels'].cpu().numpy()
+        predictions.append(logits)
+        true_vals.append(label_ids)
+
+    predictions = np.concatenate(predictions, axis=0)
+    true_vals = np.concatenate(true_vals, axis=0)
+
+    return predictions, true_vals
 
 if __name__ == '__main__':
-    fit('data.csv')
+    val_dataloader = fit(filepath='data.csv',
+                                    save_path='fine_tuned_models/')
+
+    preds, true_labels = predict(val_dataloader,
+                                            model_filepath='fine_tuned_models/finetuned_BERT.model')
 
 
 
