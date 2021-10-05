@@ -1,5 +1,6 @@
 import data_module
 import main
+import config
 import transformers
 import torch
 from transformers import AdamW, get_linear_schedule_with_warmup
@@ -10,7 +11,7 @@ from tqdm import tqdm
 
 
 
-def fit(filepath,save_path):
+def train(train_text, train_labels, filepath,save_path):
     bitch_size =32
     epochs = 2
     seed_val = 17
@@ -19,15 +20,15 @@ def fit(filepath,save_path):
     torch.manual_seed(seed_val)
     torch.cuda.manual_seed_all(seed_val)
 
-    X_train, X_val, y_train, y_val, enc_tag = main.read_dataset(filepath)
 
-    train_dataloader= data_module.ExampleDataset(text=X_train, target=y_train, train_flag=True).setup()
-    val_dataloader = data_module.ExampleDataset(text=X_val, target=y_val, train_flag=True).setup()
+
+    train_dataloader= data_module.ExampleDataset(text=train_text, target=train_labels, train_flag=True).setup()
+
 
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
     model = transformers.BertForSequenceClassification.from_pretrained("bert-base-uncased",
-                                                          num_labels=len(enc_tag.classes_),
+                                                          num_labels=config.CLASS_SIZE,
                                                           output_attentions=False,
                                                           output_hidden_states=False)
     model.to(device)
@@ -40,7 +41,7 @@ def fit(filepath,save_path):
         {"params": [p for n, p in param_optimizer if any(nd in n for nd in no_decay)], 'weight_decay': 0.0}
     ]
 
-    num_train_steps = int(len(X_train) / bitch_size * epochs)
+    num_train_steps = int(len(train_text) / bitch_size * epochs)
 
     optimizer = AdamW(optimizer_parameters, lr=3e-5)
     scheduler = get_linear_schedule_with_warmup(optimizer,
@@ -78,23 +79,23 @@ def fit(filepath,save_path):
 
 
     torch.save(model.state_dict(), '{}/finetuned_BERT.model'.format(save_path))
-    class_size = len(enc_tag.classes_)
-    return val_dataloader, class_size
 
 
-def predict(val_dataloader,class_size, model_filepath):
+
+def predict(val_text, val_labels, model_filepath):
+
+    val_dataloader = data_module.ExampleDataset(text=val_text, target=val_labels, train_flag=True).setup()
 
 
     model = transformers.BertForSequenceClassification.from_pretrained("bert-base-uncased",
-                                                          num_labels=class_size,
+                                                          num_labels=config.CLASS_SIZE,
                                                           output_attentions=False,
                                                           output_hidden_states=False)
 
-    device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
-
-
-
-    map_location = lambda storage, loc: storage.cuda()
+    if torch.cuda.is_available():
+        map_location = lambda storage, loc: storage.cuda()
+    else:
+        map_location = "cpu"
 
     model.load_state_dict(torch.load(model_filepath, map_location=map_location))
 
@@ -127,10 +128,12 @@ def predict(val_dataloader,class_size, model_filepath):
     return predictions, true_vals
 
 if __name__ == '__main__':
-    val_dataloader = fit(filepath='data.csv',
+
+    X_train, X_val, y_train, y_val, enc_tag = main.read_dataset('data.csv')
+    train(X_train,y_train,filepath='data.csv',
                                     save_path='fine_tuned_models/')
 
-    preds, true_labels = predict(val_dataloader,
+    preds, true_labels = predict(X_val,y_val,
                                             model_filepath='fine_tuned_models/finetuned_BERT.model')
 
 
