@@ -78,15 +78,16 @@ def fit(filepath,save_path):
 
 
     torch.save(model.state_dict(), '{}/finetuned_BERT.model'.format(save_path))
+    class_size = len(enc_tag.classes_)
 
-    return val_dataloader
+    return val_dataloader, class_size
 
 
-def predict(val_dataloader,model_filepath):
+def predict(val_dataloader,class_size,model_filepath):
 
 
     model = transformers.BertForSequenceClassification.from_pretrained("bert-base-uncased",
-                                                          num_labels=len(enc_tag.classes_),
+                                                          num_labels=class_size,
                                                           output_attentions=False,
                                                           output_hidden_states=False)
 
