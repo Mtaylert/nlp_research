@@ -79,11 +79,10 @@ def fit(filepath,save_path):
 
     torch.save(model.state_dict(), '{}/finetuned_BERT.model'.format(save_path))
     class_size = len(enc_tag.classes_)
-
     return val_dataloader, class_size
 
 
-def predict(val_dataloader,class_size,model_filepath):
+def predict(val_dataloader,class_size, model_filepath):
 
 
     model = transformers.BertForSequenceClassification.from_pretrained("bert-base-uncased",
@@ -91,11 +90,11 @@ def predict(val_dataloader,class_size,model_filepath):
                                                           output_attentions=False,
                                                           output_hidden_states=False)
 
+    device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
-    if torch.cuda.is_available():
-        map_location = lambda storage, loc: storage.cuda()
-    else:
-        map_location = "cpu"
+
+
+    map_location = lambda storage, loc: storage.cuda()
 
     model.load_state_dict(torch.load(model_filepath, map_location=map_location))
 
@@ -104,11 +103,7 @@ def predict(val_dataloader,class_size,model_filepath):
     loss_val_total = 0
     predictions, true_vals = [], []
 
-    device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
-
     for batch in val_dataloader:
-        batch = tuple(b.to(device) for b in batch)
-
         inputs = {'input_ids': batch[0],
                   'attention_mask': batch[1],
                   'labels': batch[2],
