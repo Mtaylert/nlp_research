@@ -7,20 +7,18 @@ from transformers import AdamW, get_linear_schedule_with_warmup
 import random
 import numpy as np
 from tqdm import tqdm
-
+from sklearn import metrics
 
 
 
 def train(train_text, train_labels, filepath,save_path):
-    bitch_size =32
-    epochs = 2
     seed_val = 17
     random.seed(seed_val)
     np.random.seed(seed_val)
     torch.manual_seed(seed_val)
     torch.cuda.manual_seed_all(seed_val)
 
-
+    train_text = main.remove_stopwords(train_text)
 
     train_dataloader= data_module.ExampleDataset(text=train_text, target=train_labels, train_flag=True).setup()
 
@@ -41,14 +39,14 @@ def train(train_text, train_labels, filepath,save_path):
         {"params": [p for n, p in param_optimizer if any(nd in n for nd in no_decay)], 'weight_decay': 0.0}
     ]
 
-    num_train_steps = int(len(train_text) / bitch_size * epochs)
+    num_train_steps = int(len(train_text) / config.BATCH_SIZE * config.EPOCHS)
 
     optimizer = AdamW(optimizer_parameters, lr=3e-5)
     scheduler = get_linear_schedule_with_warmup(optimizer,
                                                 num_warmup_steps=0,
                                                 num_training_steps=num_train_steps)
-
-    for epoch in range(1, epochs + 1):
+    top_accuracy = 0
+    for epoch in range(1, config.EPOCHS + 1):
 
         model.train()
 
@@ -68,6 +66,13 @@ def train(train_text, train_labels, filepath,save_path):
             outputs = model(**inputs)
 
             loss = outputs[0]
+            predictions = np.argmax(outputs[1].detach().cpu().numpy())
+            y_test = inputs['labels'].cpu().numpy()
+            accuracy_score = metrics.accuracy_score((y_test,predictions))
+            if accuracy_score > top_accuracy:
+                top_accuracy = accuracy_score
+                torch.save(model.state_dict(), '{}/BEST_MODEL.model'.format(save_path))
+
             loss_train_total += loss.item()
             loss.backward()
 
@@ -78,12 +83,12 @@ def train(train_text, train_labels, filepath,save_path):
 
 
 
-    torch.save(model.state_dict(), '{}/finetuned_BERT.model'.format(save_path))
+    torch.save(model.state_dict(), '{}/LAST_MODEL.model'.format(save_path))
 
 
 
 def predict(val_text, val_labels, model_filepath):
-
+    val_text = main.remove_stopwords(val_text)
     val_dataloader = data_module.ExampleDataset(text=val_text, target=val_labels, train_flag=True).setup()
 
 
@@ -130,7 +135,7 @@ def predict(val_text, val_labels, model_filepath):
 if __name__ == '__main__':
 
     X_train, X_val, y_train, y_val, enc_tag = main.read_dataset('data.csv')
-    train(X_train,y_train,filepath='data.csv',
+    train(X_train,float(y_train,filepath='data.csv',
                                     save_path='fine_tuned_models/')
 
     preds, true_labels = predict(X_val,y_val,

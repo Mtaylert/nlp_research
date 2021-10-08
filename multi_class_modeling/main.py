@@ -1,8 +1,10 @@
 import pandas as pd
 from sklearn import preprocessing
 from sklearn.model_selection import train_test_split
+import re
+from nltk.corpus import stopwords
 
-import data_module
+
 def read_dataset(filepath):
     enc_tag = preprocessing.LabelEncoder()
 
@@ -16,12 +18,15 @@ def read_dataset(filepath):
 
     return X_train, X_val, y_train, y_val,enc_tag
 
+def remove_stopwords(text):
+    stop_words = set(stopwords.words('english'))
+    text = [word for word in text.split() if word not in stop_words and len(word)>=2]
+    return ' '.join(text)
+
 
 if __name__ == '__main__':
 
     X_train, X_val, y_train, y_val, enc_tag = read_dataset('data.csv')
-    train_dataset = data_module.ExampleDataset(text=X_train,target=y_train).setup()
-    val_dataset = data_module.ExampleDataset(text=X_val, target=y_val).setup()
-    
+    print(X_train)
 
 
