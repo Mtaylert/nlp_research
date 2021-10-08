@@ -6,32 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="96f0333a-9892-441e-9b32-54b1bdc0c11e" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/multi_class_modeling/config.py" beforeDir="false" afterPath="$PROJECT_DIR$/multi_class_modeling/config.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/multi_class_modeling/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/multi_class_modeling/main.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/multi_class_modeling/mod_create.py" beforeDir="false" afterPath="$PROJECT_DIR$/multi_class_modeling/mod_create.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sentiment_analysis/src/engine.py" beforeDir="false" afterPath="$PROJECT_DIR$/sentiment_analysis/src/engine.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spacy_classifier/output/model-best/config.cfg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/spacy_classifier/output/model-best/meta.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/spacy_classifier/output/model-best/textcat_multilabel/cfg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/spacy_classifier/output/model-best/textcat_multilabel/model" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/spacy_classifier/output/model-best/tok2vec/cfg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/spacy_classifier/output/model-best/tok2vec/model" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/spacy_classifier/output/model-best/tokenizer" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/spacy_classifier/output/model-best/vocab/key2row" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/spacy_classifier/output/model-best/vocab/lookups.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/spacy_classifier/output/model-best/vocab/strings.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/spacy_classifier/output/model-best/vocab/vectors" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/spacy_classifier/output/model-last/config.cfg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/spacy_classifier/output/model-last/meta.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/spacy_classifier/output/model-last/textcat_multilabel/cfg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/spacy_classifier/output/model-last/textcat_multilabel/model" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/spacy_classifier/output/model-last/tok2vec/cfg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/spacy_classifier/output/model-last/tok2vec/model" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/spacy_classifier/output/model-last/tokenizer" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/spacy_classifier/output/model-last/vocab/key2row" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/spacy_classifier/output/model-last/vocab/lookups.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/spacy_classifier/output/model-last/vocab/strings.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/spacy_classifier/output/model-last/vocab/vectors" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -72,7 +47,7 @@
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RunManager">
-    <configuration name="main" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
+    <configuration name="mod_create" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
       <module name="nlp_research" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -95,7 +70,7 @@
           <ENTRY IS_ENABLED="true" PARSER="runconfig" />
         </ENTRIES>
       </EXTENSION>
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/multi_class_modeling/main.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/multi_class_modeling/mod_create.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -119,7 +94,7 @@
       <workItem from="1632858463177" duration="5380000" />
       <workItem from="1633034243276" duration="924000" />
       <workItem from="1633035327390" duration="7659000" />
-      <workItem from="1633700792830" duration="394000" />
+      <workItem from="1633700792830" duration="3029000" />
     </task>
     <servers />
   </component>
@@ -132,7 +107,7 @@
     <SUITE FILE_PATH="coverage/nlp_research$train.coverage" NAME="main Coverage Results" MODIFIED="1632341316775" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/question_answering/t5QA" />
     <SUITE FILE_PATH="coverage/nlp_research$test.coverage" NAME="read_data Coverage Results" MODIFIED="1633030792626" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/multimodal" />
     <SUITE FILE_PATH="coverage/nlp_research$inference.coverage" NAME="text_extract Coverage Results" MODIFIED="1632775729485" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/document_extraction" />
-    <SUITE FILE_PATH="coverage/nlp_research$main.coverage" NAME="main Coverage Results" MODIFIED="1633700826576" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/multi_class_modeling" />
+    <SUITE FILE_PATH="coverage/nlp_research$main.coverage" NAME="mod_create Coverage Results" MODIFIED="1633703226193" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/multi_class_modeling" />
     <SUITE FILE_PATH="coverage/nlp_specialization$NER_Modeling.coverage" NAME="NER_Modeling Coverage Results" MODIFIED="1630369201324" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/NER" />
   </component>
 </project>

@@ -10,25 +10,22 @@ from tqdm import tqdm
 from sklearn import metrics
 
 
-
-def train(train_text, train_labels, filepath,save_path):
+def train(train_text, train_labels, save_path):
     seed_val = 17
     random.seed(seed_val)
     np.random.seed(seed_val)
     torch.manual_seed(seed_val)
     torch.cuda.manual_seed_all(seed_val)
 
-    train_text = main.remove_stopwords(train_text)
-
-    train_dataloader= data_module.ExampleDataset(text=train_text, target=train_labels, train_flag=True).setup()
-
+    train_text = [main.remove_stopwords(text_line) for text_line in train_text]
+    train_dataloader = data_module.ExampleDataset(text=train_text, target=train_labels, train_flag=True).setup()
 
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
     model = transformers.BertForSequenceClassification.from_pretrained("bert-base-uncased",
-                                                          num_labels=config.CLASS_SIZE,
-                                                          output_attentions=False,
-                                                          output_hidden_states=False)
+                                                                       num_labels=config.CLASS_SIZE,
+                                                                       output_attentions=False,
+                                                                       output_hidden_states=False)
     model.to(device)
 
     param_optimizer = list(model.named_parameters())
@@ -48,6 +45,7 @@ def train(train_text, train_labels, filepath,save_path):
     top_accuracy = 0
     for epoch in range(1, config.EPOCHS + 1):
 
+        batch_predictions, batch_actuals = [], []
         model.train()
 
         loss_train_total = 0
@@ -66,36 +64,35 @@ def train(train_text, train_labels, filepath,save_path):
             outputs = model(**inputs)
 
             loss = outputs[0]
-            predictions = np.argmax(outputs[1].detach().cpu().numpy())
-            y_test = inputs['labels'].cpu().numpy()
-            accuracy_score = metrics.accuracy_score((y_test,predictions))
-            if accuracy_score > top_accuracy:
-                top_accuracy = accuracy_score
-                torch.save(model.state_dict(), '{}/BEST_MODEL.model'.format(save_path))
+            logits = outputs[1].detach().cpu().numpy()
+            label_ids = inputs['labels'].cpu().numpy()
+            for pred, act in zip(np.argmax(logits, axis=1), label_ids):
+                batch_predictions.append(pred)
+                batch_actuals.append(act)
 
             loss_train_total += loss.item()
             loss.backward()
-
             torch.nn.utils.clip_grad_norm_(model.parameters(), 1.0)
-
             optimizer.step()
             scheduler.step()
 
-
+        batch_acc = metrics.accuracy_score(batch_actuals, batch_predictions)
+        if batch_acc > top_accuracy:
+            print("Current model is better than previous {} > {}".format(batch_acc, top_accuracy))
+            torch.save(model.state_dict(), '{}/BEST_MODEL.model'.format(save_path))
 
     torch.save(model.state_dict(), '{}/LAST_MODEL.model'.format(save_path))
 
 
-
 def predict(val_text, val_labels, model_filepath):
-    val_text = main.remove_stopwords(val_text)
+    val_text = [main.remove_stopwords(text_line) for text_line in val_text]
+
     val_dataloader = data_module.ExampleDataset(text=val_text, target=val_labels, train_flag=True).setup()
 
-
     model = transformers.BertForSequenceClassification.from_pretrained("bert-base-uncased",
-                                                          num_labels=config.CLASS_SIZE,
-                                                          output_attentions=False,
-                                                          output_hidden_states=False)
+                                                                       num_labels=config.CLASS_SIZE,
+                                                                       output_attentions=False,
+                                                                       output_hidden_states=False)
 
     if torch.cuda.is_available():
         map_location = lambda storage, loc: storage.cuda()
@@ -132,14 +129,7 @@ def predict(val_text, val_labels, model_filepath):
 
     return predictions, true_vals
 
-if __name__ == '__main__':
 
-    X_train, X_val, y_train, y_val, enc_tag = main.read_dataset('data.csv')
-    train(X_train,float(y_train,filepath='data.csv',
-                                    save_path='fine_tuned_models/')
-
-    preds, true_labels = predict(X_val,y_val,
-                                            model_filepath='fine_tuned_models/finetuned_BERT.model')
 
 
 
