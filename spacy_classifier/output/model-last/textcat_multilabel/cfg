@@ -1,0 +1,10 @@
+{
+  "labels":[
+    "ISCAS",
+    "INFOCOM",
+    "VLDB",
+    "WWW",
+    "SIGGRAPH"
+  ],
+  "threshold":0.5
+}
