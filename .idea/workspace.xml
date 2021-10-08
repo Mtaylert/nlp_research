@@ -5,16 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="96f0333a-9892-441e-9b32-54b1bdc0c11e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/multi_class_modeling/Gensim/word2vec_model.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/multi_class_modeling/config.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/multi_class_modeling/data_module.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/multi_class_modeling/main.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/multi_class_modeling/mod_create.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/multi_class_modeling/model.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/spacy_classifier/data/train.spacy" beforeDir="false" afterPath="$PROJECT_DIR$/spacy_classifier/data/train.spacy" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spacy_classifier/data/valid.spacy" beforeDir="false" afterPath="$PROJECT_DIR$/spacy_classifier/data/valid.spacy" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spacy_classifier/reviews.py" beforeDir="false" afterPath="$PROJECT_DIR$/spacy_classifier/reviews.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/multi_class_modeling/Gensim/word2vec_model.py" beforeDir="false" afterPath="$PROJECT_DIR$/multi_class_modeling/Gensim/word2vec_model.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -165,7 +157,7 @@
       <workItem from="1632858463177" duration="5380000" />
       <workItem from="1633034243276" duration="924000" />
       <workItem from="1633035327390" duration="7659000" />
-      <workItem from="1633700792830" duration="12558000" />
+      <workItem from="1633700792830" duration="13351000" />
     </task>
     <servers />
   </component>
@@ -179,7 +171,7 @@
     <SUITE FILE_PATH="coverage/nlp_research$train.coverage" NAME="main Coverage Results" MODIFIED="1632341316775" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/question_answering/t5QA" />
     <SUITE FILE_PATH="coverage/nlp_research$test.coverage" NAME="read_data Coverage Results" MODIFIED="1633030792626" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/multimodal" />
     <SUITE FILE_PATH="coverage/nlp_research$inference.coverage" NAME="text_extract Coverage Results" MODIFIED="1632775729485" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/document_extraction" />
-    <SUITE FILE_PATH="coverage/nlp_research$word2vec_model.coverage" NAME="word2vec_model Coverage Results" MODIFIED="1633723830790" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/multi_class_modeling/Gensim" />
+    <SUITE FILE_PATH="coverage/nlp_research$word2vec_model.coverage" NAME="word2vec_model Coverage Results" MODIFIED="1633725444966" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/multi_class_modeling/Gensim" />
     <SUITE FILE_PATH="coverage/nlp_research$main.coverage" NAME="reviews Coverage Results" MODIFIED="1633718527511" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/spacy_classifier" />
     <SUITE FILE_PATH="coverage/nlp_specialization$NER_Modeling.coverage" NAME="NER_Modeling Coverage Results" MODIFIED="1630369201324" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/NER" />
   </component>
