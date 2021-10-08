@@ -5,7 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="96f0333a-9892-441e-9b32-54b1bdc0c11e" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/multi_class_modeling/mod_create.py" beforeDir="false" afterPath="$PROJECT_DIR$/multi_class_modeling/mod_create.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -94,7 +93,7 @@
       <workItem from="1632858463177" duration="5380000" />
       <workItem from="1633034243276" duration="924000" />
       <workItem from="1633035327390" duration="7659000" />
-      <workItem from="1633700792830" duration="3029000" />
+      <workItem from="1633700792830" duration="3480000" />
     </task>
     <servers />
   </component>

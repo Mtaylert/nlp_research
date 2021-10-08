@@ -78,6 +78,7 @@ def train(train_text, train_labels, save_path):
 
         batch_acc = metrics.accuracy_score(batch_actuals, batch_predictions)
         if batch_acc > top_accuracy:
+            top_accuracy= batch_acc
             print("Current model is better than previous {} > {}".format(batch_acc, top_accuracy))
             torch.save(model.state_dict(), '{}/BEST_MODEL.model'.format(save_path))
 
