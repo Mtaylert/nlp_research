@@ -4,7 +4,7 @@ import pandas as pd
 from sklearn import preprocessing, model_selection, metrics
 import numpy as np
 from sklearn.linear_model import LogisticRegression
-from sklearn.ensemble import GradientBoostingClassifier
+from sklearn.ensemble import GradientBoostingClassifier, RandomForestClassifier
 from typing import List
 
 class EmbedText:
@@ -32,7 +32,8 @@ if __name__ == '__main__':
 
     scores = {}
 
-    for clf in [('LR',LogisticRegression(max_iter=5000)),  ('GBT', GradientBoostingClassifier(n_estimators=150))]:
+    for clf in [('LR',LogisticRegression(max_iter=5000)),  ('GBT', GradientBoostingClassifier(n_estimators=150)),
+                ('RF',RandomForestClassifier(n_estimators=200))]:
         clf[1].fit(X_train,y_train)
         accuracy = metrics.accuracy_score(y_test,clf[1].predict(X_test))
         print(accuracy)
