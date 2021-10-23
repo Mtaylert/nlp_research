@@ -98,3 +98,4 @@ def check_accuracy(loader, model):
 
 
 check_accuracy(train_loader, model)
+check_accuracy(test_loader, model)

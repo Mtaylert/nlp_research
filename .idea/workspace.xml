@@ -200,12 +200,12 @@
       <method v="2" />
     </configuration>
     <list>
+      <item itemvalue="Python.basic_tensor" />
+      <item itemvalue="Python.feed_forward_nn" />
+      <item itemvalue="Python.read_csv" />
       <item itemvalue="Python.reviews" />
       <item itemvalue="Python.utils" />
       <item itemvalue="Python.word2vec_model" />
-      <item itemvalue="Python.read_csv" />
-      <item itemvalue="Python.basic_tensor" />
-      <item itemvalue="Python.feed_forward_nn" />
     </list>
     <recent_temporary>
       <list>
