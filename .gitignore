@@ -1,3 +1,4 @@
+.idea/workspace.xml
 question_answering/t5QA/input/*
 entity_recognition/input/*
 question_answering/t5QA/output/*

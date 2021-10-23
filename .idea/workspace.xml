@@ -5,10 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="96f0333a-9892-441e-9b32-54b1bdc0c11e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/deep_learning_research/basic_torch/feed_forward_nn.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/image_captioning/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/image_captioning/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/image_captioning/train.py" beforeDir="false" afterPath="$PROJECT_DIR$/image_captioning/train.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/deep_learning_research/basic_torch/feed_forward_nn.py" beforeDir="false" afterPath="$PROJECT_DIR$/deep_learning_research/basic_torch/feed_forward_nn.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -232,7 +230,7 @@
       <workItem from="1633034243276" duration="924000" />
       <workItem from="1633035327390" duration="7659000" />
       <workItem from="1633700792830" duration="16143000" />
-      <workItem from="1634905510506" duration="3925000" />
+      <workItem from="1634905510506" duration="4886000" />
     </task>
     <servers />
   </component>
@@ -243,7 +241,7 @@
     <SUITE FILE_PATH="coverage/nlp_research$read_data.coverage" NAME="mod_create Coverage Results" MODIFIED="1633393286213" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/multi_class_modeling" />
     <SUITE FILE_PATH="coverage/nlp_research$basic_tensor.coverage" NAME="basic_tensor Coverage Results" MODIFIED="1634905888950" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/deep_learning_research/basic_torch" />
     <SUITE FILE_PATH="coverage/nlp_research$utils.coverage" NAME="utils Coverage Results" MODIFIED="1633715574002" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/spacy_classifier" />
-    <SUITE FILE_PATH="coverage/nlp_research$feed_forward_nn.coverage" NAME="feed_forward_nn Coverage Results" MODIFIED="1634917776163" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/deep_learning_research/basic_torch" />
+    <SUITE FILE_PATH="coverage/nlp_research$feed_forward_nn.coverage" NAME="feed_forward_nn Coverage Results" MODIFIED="1634994872921" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/deep_learning_research/basic_torch" />
     <SUITE FILE_PATH="coverage/nlp_research$markov_chain.coverage" NAME="config Coverage Results" MODIFIED="1631825025067" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/sentiment_analysis/src" />
     <SUITE FILE_PATH="coverage/nlp_research$train.coverage" NAME="main Coverage Results" MODIFIED="1632341316775" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/question_answering/t5QA" />
     <SUITE FILE_PATH="coverage/nlp_research$test.coverage" NAME="read_data Coverage Results" MODIFIED="1633030792626" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/multimodal" />
