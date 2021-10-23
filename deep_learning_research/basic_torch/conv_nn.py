@@ -65,6 +65,7 @@ for epoch in range(NUM_EPOCHS):
     for batch_idx, (data, targets) in tqdm(enumerate(train_loader)):
         data = data.to(device=device)
         targets = targets.to(device=device)
+        print(targets)
         #forward
         scores = model(data)
         loss = criterion(scores, targets)

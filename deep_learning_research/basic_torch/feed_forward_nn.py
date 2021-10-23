@@ -58,6 +58,8 @@ for epoch in range(NUM_EPOCHS):
         data = data.to(device=device).reshape(data.shape[0], -1)
         targets = targets.to(device=device)
         scores = model(data)
+
+
         loss = criterion(scores, targets)
 
         # backward
