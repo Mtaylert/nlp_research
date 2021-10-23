@@ -5,10 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="96f0333a-9892-441e-9b32-54b1bdc0c11e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/deep_learning_research/basic_torch/feed_forward_nn.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/image_captioning/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/image_captioning/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/image_captioning/train.py" beforeDir="false" afterPath="$PROJECT_DIR$/image_captioning/train.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,7 +53,7 @@
       <recent name="$PROJECT_DIR$/spacy_classifier" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.feed_forward_nn">
+  <component name="RunManager" selected="Python.conv_nn">
     <configuration name="basic_tensor" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="nlp_research" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -71,6 +68,28 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/deep_learning_research/basic_torch/basic_tensor.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="conv_nn" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="nlp_research" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/deep_learning_research/basic_torch" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/deep_learning_research/basic_torch/conv_nn.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -155,28 +174,6 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="utils" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="nlp_research" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/spacy_classifier" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/spacy_classifier/utils.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
     <configuration name="word2vec_model" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="nlp_research" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -200,20 +197,20 @@
       <method v="2" />
     </configuration>
     <list>
+      <item itemvalue="Python.reviews" />
+      <item itemvalue="Python.word2vec_model" />
+      <item itemvalue="Python.read_csv" />
       <item itemvalue="Python.basic_tensor" />
       <item itemvalue="Python.feed_forward_nn" />
-      <item itemvalue="Python.read_csv" />
-      <item itemvalue="Python.reviews" />
-      <item itemvalue="Python.utils" />
-      <item itemvalue="Python.word2vec_model" />
+      <item itemvalue="Python.conv_nn" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.conv_nn" />
         <item itemvalue="Python.feed_forward_nn" />
         <item itemvalue="Python.basic_tensor" />
         <item itemvalue="Python.word2vec_model" />
         <item itemvalue="Python.read_csv" />
-        <item itemvalue="Python.utils" />
       </list>
     </recent_temporary>
   </component>
@@ -241,16 +238,17 @@
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/nlp_research$read_data.coverage" NAME="mod_create Coverage Results" MODIFIED="1633393286213" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/multi_class_modeling" />
-    <SUITE FILE_PATH="coverage/nlp_research$basic_tensor.coverage" NAME="basic_tensor Coverage Results" MODIFIED="1634905888950" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/deep_learning_research/basic_torch" />
-    <SUITE FILE_PATH="coverage/nlp_research$utils.coverage" NAME="utils Coverage Results" MODIFIED="1633715574002" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/spacy_classifier" />
-    <SUITE FILE_PATH="coverage/nlp_research$feed_forward_nn.coverage" NAME="feed_forward_nn Coverage Results" MODIFIED="1634917776163" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/deep_learning_research/basic_torch" />
-    <SUITE FILE_PATH="coverage/nlp_research$markov_chain.coverage" NAME="config Coverage Results" MODIFIED="1631825025067" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/sentiment_analysis/src" />
-    <SUITE FILE_PATH="coverage/nlp_research$train.coverage" NAME="main Coverage Results" MODIFIED="1632341316775" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/question_answering/t5QA" />
-    <SUITE FILE_PATH="coverage/nlp_research$test.coverage" NAME="read_data Coverage Results" MODIFIED="1633030792626" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/multimodal" />
-    <SUITE FILE_PATH="coverage/nlp_research$read_csv.coverage" NAME="read_csv Coverage Results" MODIFIED="1633784738046" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/multi_class_modeling/Gensim" />
     <SUITE FILE_PATH="coverage/nlp_research$inference.coverage" NAME="text_extract Coverage Results" MODIFIED="1632775729485" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/document_extraction" />
     <SUITE FILE_PATH="coverage/nlp_research$word2vec_model.coverage" NAME="word2vec_model Coverage Results" MODIFIED="1633797827103" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/multi_class_modeling/Gensim" />
     <SUITE FILE_PATH="coverage/nlp_research$main.coverage" NAME="reviews Coverage Results" MODIFIED="1633718527511" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/spacy_classifier" />
     <SUITE FILE_PATH="coverage/nlp_specialization$NER_Modeling.coverage" NAME="NER_Modeling Coverage Results" MODIFIED="1630369201324" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/NER" />
+    <SUITE FILE_PATH="coverage/nlp_research$basic_tensor.coverage" NAME="basic_tensor Coverage Results" MODIFIED="1634905888950" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/deep_learning_research/basic_torch" />
+    <SUITE FILE_PATH="coverage/nlp_research$utils.coverage" NAME="utils Coverage Results" MODIFIED="1633715574002" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/spacy_classifier" />
+    <SUITE FILE_PATH="coverage/nlp_research$feed_forward_nn.coverage" NAME="feed_forward_nn Coverage Results" MODIFIED="1634994872921" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/deep_learning_research/basic_torch" />
+    <SUITE FILE_PATH="coverage/nlp_research$markov_chain.coverage" NAME="config Coverage Results" MODIFIED="1631825025067" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/sentiment_analysis/src" />
+    <SUITE FILE_PATH="coverage/nlp_research$train.coverage" NAME="main Coverage Results" MODIFIED="1632341316775" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/question_answering/t5QA" />
+    <SUITE FILE_PATH="coverage/nlp_research$test.coverage" NAME="read_data Coverage Results" MODIFIED="1633030792626" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/multimodal" />
+    <SUITE FILE_PATH="coverage/nlp_research$read_csv.coverage" NAME="read_csv Coverage Results" MODIFIED="1633784738046" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/multi_class_modeling/Gensim" />
+    <SUITE FILE_PATH="coverage/nlp_research$conv_nn.coverage" NAME="conv_nn Coverage Results" MODIFIED="1634996151707" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/deep_learning_research/basic_torch" />
   </component>
 </project>
