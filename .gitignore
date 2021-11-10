@@ -1,3 +1,5 @@
+__pycache__
+.idea/*
 text_summarization/output/*
 question_answering/t5QA/input/*
 entity_recognition/input/*
