@@ -25,7 +25,7 @@ def load_data():
                             "partition": text_set[0],
                             "sentence_1": line[5],
                             "sentence_2": line[6],
-                            "similarity": float(line[4]),
+                            "similarity": int(float(line[4])>3),
                         }
                     )
                 except:
@@ -37,5 +37,4 @@ def load_data():
 if __name__ == "__main__":
     df = load_data()
     v = 10
-    print(df['sentence_1'].iloc[v])
-    print(df['sentence_2'].iloc[v])
+    print(df.similarity.value_counts())
