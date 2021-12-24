@@ -7,7 +7,6 @@ def load_data():
 
     """
 
-
     train = "sts_b/sts-train.csv"
     test = "sts_b/sts-test.csv"
     dev = "sts_b/sts-dev.csv"
@@ -25,13 +24,14 @@ def load_data():
                             "partition": text_set[0],
                             "sentence_1": line[5],
                             "sentence_2": line[6],
-                            "similarity": int(float(line[4])>3),
+                            "similarity": int(float(line[4]) > 3),
                         }
                     )
                 except:
                     pass
     stored = pd.DataFrame(stored)
     return stored
+
 
 if __name__ == "__main__":
     df = load_data()
