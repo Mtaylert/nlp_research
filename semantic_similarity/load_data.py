@@ -33,7 +33,6 @@ def load_data():
     stored = pd.DataFrame(stored)
     return stored
 
-
 if __name__ == "__main__":
     df = load_data()
     v = 10
