@@ -17,15 +17,20 @@ class SemanticSimilarity:
     """
     Passing the transformer architecture into a sklearn arch
     """
+
     def __init__(self, epochs: int = 2, retrain: bool = True):
         self.device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
         self.epochs = epochs
         self.save_path = "model/"
+        self.model = BertBaseUncased()
         if retrain:
-            self.model = BertBaseUncased()
             self.model.to(self.device)
         else:
-            pass
+            self.model.load_state_dict(
+                torch.load(
+                    self.save_path + "LAST_MODEL.model", map_location=self.device
+                )
+            )
 
     def loss_fn(self, outputs, targets):
         return nn.BCEWithLogitsLoss()(outputs, targets.view(-1, 1))
@@ -94,15 +99,51 @@ class SemanticSimilarity:
             self.model.state_dict(), "{}/LAST_MODEL.model".format(self.save_path)
         )
 
-    def predict(self):
-        pass
+    def predict(self, X):
+
+        final_outputs = []
+        self.model.eval()
+
+        val_dataset = data_setup.BertDatasetTraining(
+            input1=X["sentence_1"],
+            input2=X["sentence_2"],
+            target=np.ones(len(X)),
+        )
+
+        val_data_loader = torch.utils.data.DataLoader(
+            val_dataset, batch_size=config.VALID_BATCH_SIZE, num_workers=4
+        )
+
+        with torch.no_grad():
+            for batch_idx, dataset in tqdm(
+                enumerate(val_data_loader), total=len(val_data_loader)
+            ):
+                ids = dataset["ids"]
+                mask = dataset["mask"]
+                token_type_ids = dataset["token_type_ids"]
+
+                ids = ids.to(self.device, dtype=torch.long)
+                mask = mask.to(self.device, dtype=torch.long)
+                token_type_ids = token_type_ids.to(self.device, dtype=torch.long)
+
+                outputs = self.model(ids, mask=mask, token_type_ids=token_type_ids)
+                final_outputs.extend(
+                    torch.sigmoid(outputs.cpu()).detach().numpy().tolist()[0]
+                )
+        return final_outputs
 
 
 if __name__ == "__main__":
     df = load_data()
-    train = df[df["partition"] == "train"]
-    X = train.drop(["similarity"], axis=1)
-    y = train["similarity"]
 
-    clf = SemanticSimilarity()
-    clf.fit(X, y)
+    train = df[df["partition"] == "train"]
+
+    dev = df[df["partition"] != "train"].reset_index(drop=True)
+    dev = dev.iloc[0:10]
+
+    X = dev.drop(["similarity"], axis=1)
+    y = dev["similarity"]
+    clf = SemanticSimilarity(epochs=2, retrain=False)
+    # clf.fit(X,y)
+    outputs = clf.predict(X)
+    print(outputs)
