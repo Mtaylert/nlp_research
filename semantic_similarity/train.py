@@ -139,11 +139,12 @@ if __name__ == "__main__":
     train = df[df["partition"] == "train"]
 
     dev = df[df["partition"] != "train"].reset_index(drop=True)
-    dev = dev.iloc[0:10]
+    dev = dev.iloc[0:20]
 
     X = dev.drop(["similarity"], axis=1)
     y = dev["similarity"]
     clf = SemanticSimilarity(epochs=2, retrain=False)
     # clf.fit(X,y)
     outputs = clf.predict(X)
-    print(outputs)
+    dev['scores'] = outputs
+    dev.to_csv('review.csv',index=False)
