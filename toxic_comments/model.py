@@ -24,8 +24,7 @@ class BuildFolds:
 
 
 class TextEmbedder:
-    def __init__(self, dimensions=50, window=5, sg=1, epochs=3, min_n=2, max_n=6, n_grammer= (3,5), analyzer = 'char_wb'):
-        self.tfidf_params = {'ngram_range':n_grammer, 'analyzer':analyzer}
+    def __init__(self, dimensions=50, window=5, sg=1, epochs=3, min_n=2, max_n=6):
         self.fasttext_params = {'vector_size':dimensions,
                                 'window':window,
                                 'sg':sg,
@@ -35,7 +34,6 @@ class TextEmbedder:
                                 'max_n':max_n}
 
     def fit(self, text):
-        self.tfidf = TfidfVectorizer(**self.tfidf_params).fit(text)
         self.fast_text = FastText(text, **self.fasttext_params)
 
     def transform(self, text):
@@ -47,8 +45,8 @@ class TextEmbedder:
             fast_embeddings[idx] = np.sum(sub_embedding, axis=0)[0]
 
         fast_df = pd.DataFrame.from_dict(fast_embeddings,orient='index')
-        tfidf_df = pd.DataFrame(self.tfidf.transform(text).todense())
-        return pd.concat([fast_df,tfidf_df],axis=1)
+
+        return fast_df
 
 if __name__ == '__main__':
     df = pd.read_csv('data/train.csv')
