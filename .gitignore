@@ -1,3 +1,8 @@
+
+
+toxic_comments/FastText.model
+toxic_comments/FastText.model.wv.vectors_ngrams.npy
+
 .DS_Store
 __pycache__
 .idea/*
@@ -9,3 +14,4 @@ question_answering/DistilBERTQA/output/*
 question_answering/DistilBERTQA/input/*
 multimodal/data
 text_generation/data/*
+Regression_Modeling/LSTM/saved_models/
