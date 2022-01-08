@@ -3,6 +3,10 @@ from sklearn.feature_extraction.text import TfidfVectorizer
 import pandas as pd
 import numpy as np
 
+import nltk
+from nltk.corpus import stopwords
+stop = stopwords.words('english')
+
 
 class BuildFolds:
 
@@ -23,9 +27,36 @@ class BuildFolds:
             tmp_df.to_csv(self.save_path + f'df_fld{fld}.csv', index=False)
 
 
+def clean(data, col):
+    data[col] = data[col].str.replace(r"what's", "what is ")
+    data[col] = data[col].str.replace(r"\'ve", " have ")
+    data[col] = data[col].str.replace(r"can't", "cannot ")
+    data[col] = data[col].str.replace(r"n't", " not ")
+    data[col] = data[col].str.replace(r"i'm", "i am ")
+    data[col] = data[col].str.replace(r"\'re", " are ")
+    data[col] = data[col].str.replace(r"\'d", " would ")
+    data[col] = data[col].str.replace(r"\'ll", " will ")
+    data[col] = data[col].str.replace(r"\'scuse", " excuse ")
+    data[col] = data[col].str.replace(r"\'s", " ")
+
+    # Clean some punctutations
+    data[col] = data[col].str.replace('\n', ' \n ')
+    data[col] = data[col].str.replace(r'([a-zA-Z]+)([/!?.])([a-zA-Z]+)', r'\1 \2 \3')
+    # Replace repeating characters more than 3 times to length of 3
+    data[col] = data[col].str.replace(r'([*!?\'])\1\1{2,}', r'\1\1\1')
+    # Add space around repeating characters
+    data[col] = data[col].str.replace(r'([*!?\']+)', r' \1 ')
+    # patterns with repeating characters
+    data[col] = data[col].str.replace(r'([a-zA-Z])\1{2,}\b', r'\1\1')
+    data[col] = data[col].str.replace(r'([a-zA-Z])\1\1{2,}\B', r'\1\1\1')
+    data[col] = data[col].str.replace(r'[ ]{2,}', ' ').str.strip()
+    data[col] = data[col].str.replace(r'[ ]{2,}', ' ').str.strip()
+    data[col] = data[col].apply(lambda x: ' '.join([word for word in x.split() if word not in (stop)]))
+
+    return data
+
 class TextEmbedder:
-    def __init__(self, dimensions=50, window=5, sg=1, epochs=3, min_n=2, max_n=6, n_grammer= (3,5), analyzer = 'char_wb'):
-        self.tfidf_params = {'ngram_range':n_grammer, 'analyzer':analyzer}
+    def __init__(self, dimensions=300, window=7, sg=1, epochs=10, min_n=1, max_n=6):
         self.fasttext_params = {'vector_size':dimensions,
                                 'window':window,
                                 'sg':sg,
@@ -35,8 +66,8 @@ class TextEmbedder:
                                 'max_n':max_n}
 
     def fit(self, text):
-        self.tfidf = TfidfVectorizer(**self.tfidf_params).fit(text)
         self.fast_text = FastText(text, **self.fasttext_params)
+        self.fast_text.save("FastText.model")
 
     def transform(self, text):
         fast_embeddings = {}
@@ -47,12 +78,16 @@ class TextEmbedder:
             fast_embeddings[idx] = np.sum(sub_embedding, axis=0)[0]
 
         fast_df = pd.DataFrame.from_dict(fast_embeddings,orient='index')
-        tfidf_df = pd.DataFrame(self.tfidf.transform(text).todense())
-        return pd.concat([fast_df,tfidf_df],axis=1)
+
+        return fast_df
 
 if __name__ == '__main__':
     df = pd.read_csv('data/train.csv')
-    embedding_module = TextEmbedder()
-    embedding_module.fit(df['comment_text'])
-    embedding_df = embedding_module.transform(df['comment_text'])
-    print(embedding_df)
+    df =clean(df, 'comment_text')
+
+    mod = TextEmbedder()
+    mod.fit(df['comment_text'])
+    #fmodel = FastText.load('FastText.model')
+    #vecs = fmodel.wv[df['comment_text'].iloc[0].split()].mean(axis=0)
+    #print(vecs)
+
