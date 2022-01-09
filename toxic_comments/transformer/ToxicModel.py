@@ -92,7 +92,7 @@ class ToxicComments:
     Passing the transformer architecture into a sklearn arch
     """
 
-    def __init__(self, epochs: int = 2, retrain: bool = True, num=0):
+    def __init__(self, epochs: int = 3, retrain: bool = True, num=0):
         self.device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
         self.epochs = epochs
         self.save_path = "/kaggle/output/"
@@ -106,6 +106,7 @@ class ToxicComments:
             self.model.to(self.device)
 
     def loss_fn(self, outputs, targets):
+
         return nn.BCEWithLogitsLoss()(outputs, targets.view(-1, 1))
 
     def fit(self, X, y, num=0):
@@ -158,6 +159,7 @@ class ToxicComments:
 
                 optimizer.zero_grad()
                 outputs = self.model(ids, attention_mask=mask, token_type_ids=token_type_ids)
+
                 loss = self.loss_fn(outputs, targets)
                 loss.backward()
                 optimizer.step()
