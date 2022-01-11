@@ -2,7 +2,7 @@ toxic_comments/competition_models/*
 Regression_Modeling/LSTM/saved_models/*
 toxic_comments/roberta-base/
 
-
+toxic_comments/Exotic_Models/embeddings/*
 
 toxic_comments/FastText.model
 toxic_comments/FastText.model.wv.vectors_ngrams.npy
