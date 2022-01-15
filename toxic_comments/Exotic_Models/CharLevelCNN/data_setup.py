@@ -48,7 +48,7 @@ class CharDataset:
                 (data, np.zeros((self.max_length - len(data), len(self.vocabulary)), dtype=np.float32)))
         elif len(data) == 0:
             data = np.zeros((self.max_length, len(self.vocabulary)), dtype=np.float32)
-        label = self.target[index]
+            label = self.target[index]
         return {'input':data, 'target':label}
 
 
