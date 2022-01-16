@@ -25,7 +25,7 @@ class CNNTfidfClassifier:
 
     def fit(self, X, y):
         self.tfidf_modeler = self.tfidf.fit(X)
-        input_size = len(tfidf_modeler.get_feature_names())
+        input_size = len(self.tfidf_modeler.get_feature_names())
         train_dataset = TfidfDataset(
             input_text=X, targets=y, tfidf_modeler=self.tfidf_modeler
         )
