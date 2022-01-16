@@ -144,6 +144,8 @@ class ToxicComments:
         self.model.train()
 
         for epoch in range(self.epochs):
+            total_loss, total = 0, 0
+
             for batch_idx, dataset in tqdm(
                     enumerate(train_data_loader), total=len(train_data_loader)
             ):
