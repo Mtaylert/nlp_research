@@ -9,16 +9,18 @@ class TfidfDataset:
     def __init__(self, input_text, targets, tfidf_modeler):
 
         self.targets = targets
-        self.input_text = list(tfidf_modeler.transform(input_text).toarray())
+        self.input_text = input_text
+        self.tfidf_modeler = tfidf_modeler
 
     def __len__(self):
         return len(self.input_text)
 
     def __getitem__(self, item):
-        text = self.input_text[item]
+        text = self.input_text.iloc[item]
+        text = self.tfidf_modeler.transform([text]).toarray().reshape(-1,1)
         return {
             "ids": torch.tensor(text, dtype=torch.float),
-            "targets": torch.tensor(int(self.targets[item]), dtype=torch.float),
+            "targets": torch.tensor(int(self.targets.iloc[item]), dtype=torch.float),
         }
 
 

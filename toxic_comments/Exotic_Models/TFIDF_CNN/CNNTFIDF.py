@@ -55,9 +55,6 @@ class CNNTfidfClassifier:
             ):
 
                 features = batch["ids"]
-                # add a new dimension: channel to enter cnn
-                features = features.unsqueeze(dim=2)
-
                 targets = batch["targets"]
 
                 features = features.to(self.device, dtype=torch.float)
@@ -84,8 +81,6 @@ class CNNTfidfClassifier:
                 enumerate(test_dataloader), total=len(test_dataloader)
             ):
                 features = batch["ids"]
-                # add a new dimension: channel to enter cnn
-                features = features.unsqueeze(dim=2)
                 features = features.to(self.device, dtype=torch.float)
                 predictions = self.model(features)
                 final_outputs.extend(

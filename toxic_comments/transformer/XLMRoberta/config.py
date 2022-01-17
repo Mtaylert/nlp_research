@@ -1,0 +1,2 @@
+MAX_LEN = 256
+BATCH_SIZE = 32
