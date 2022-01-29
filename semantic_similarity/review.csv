@@ -1,21 +1,21 @@
 index,partition,sentence_1,sentence_2,similarity,scores
-0,test,A girl is styling her hair.,A girl is brushing her hair.,0,0.9132542014122009
-1,test,A group of men play soccer on the beach.,A group of boys are playing soccer on the beach.,1,0.9514942169189453
-2,test,One woman is measuring another woman's ankle.,A woman measures another woman's ankle.,1,0.9539713859558105
-3,test,A man is cutting up a cucumber.,A man is slicing a cucumber.,1,0.9542321562767029
-4,test,A man is playing a harp.,A man is playing a keyboard.,0,0.014855879358947277
-5,test,A woman is cutting onions.,A woman is cutting tofu.,0,0.027952035889029503
-6,test,A man is riding an electric bicycle.,A man is riding a bicycle.,1,0.9470087289810181
-7,test,A man is playing the drums.,A man is playing the guitar.,0,0.01444341242313385
-8,test,A man is playing guitar.,A lady is playing the guitar.,0,0.05104886367917061
-9,test,A man is playing a guitar.,A man is playing a trumpet.,0,0.01421141903847456
-10,test,A man is playing a guitar.,A man is playing a trumpet.,0,0.01421141903847456
-11,test,A man is cutting an onion.,A man cuts an onion.,1,0.953326404094696
-12,test,A man is cycling.,A man is talking.,0,0.017208639532327652
-13,test,A man is slicing open a fish.,A man is cutting up a fish.,1,0.9538149833679199
-14,test,A man is slicing a tomato.,A man is slicing a bun.,0,0.017524385824799538
-15,test,A man is playing a guitar.,A man is playing a keyboard.,0,0.015251765958964825
-16,test,A baby panda goes down a slide.,A panda slides down a slide.,1,0.959177553653717
-17,test,A man is singing and playing a guitar.,A man is playing a guitar.,1,0.9022964835166931
-18,test,A man attacks a woman.,A man slaps a woman.,1,0.5389424562454224
-19,test,A man is driving a car.,A man is riding a horse.,0,0.013963067904114723
+0,test,A girl is styling her hair.,A girl is brushing her hair.,0,0.501166045665741
+1,test,A group of men play soccer on the beach.,A group of boys are playing soccer on the beach.,1,0.503882110118866
+2,test,One woman is measuring another woman's ankle.,A woman measures another woman's ankle.,1,0.5055009126663208
+3,test,A man is cutting up a cucumber.,A man is slicing a cucumber.,1,0.5050983428955078
+4,test,A man is playing a harp.,A man is playing a keyboard.,0,0.5048137307167053
+5,test,A woman is cutting onions.,A woman is cutting tofu.,0,0.5031946897506714
+6,test,A man is riding an electric bicycle.,A man is riding a bicycle.,1,0.5042262077331543
+7,test,A man is playing the drums.,A man is playing the guitar.,0,0.5035611391067505
+8,test,A man is playing guitar.,A lady is playing the guitar.,0,0.5008799433708191
+9,test,A man is playing a guitar.,A man is playing a trumpet.,0,0.5040937662124634
+10,test,A man is playing a guitar.,A man is playing a trumpet.,0,0.5040937662124634
+11,test,A man is cutting an onion.,A man cuts an onion.,1,0.5021068453788757
+12,test,A man is cycling.,A man is talking.,0,0.5033664107322693
+13,test,A man is slicing open a fish.,A man is cutting up a fish.,1,0.5042645931243896
+14,test,A man is slicing a tomato.,A man is slicing a bun.,0,0.5020079016685486
+15,test,A man is playing a guitar.,A man is playing a keyboard.,0,0.5036576390266418
+16,test,A baby panda goes down a slide.,A panda slides down a slide.,1,0.5057294368743896
+17,test,A man is singing and playing a guitar.,A man is playing a guitar.,1,0.5036025047302246
+18,test,A man attacks a woman.,A man slaps a woman.,1,0.5052540898323059
+19,test,A man is driving a car.,A man is riding a horse.,0,0.5047699809074402
