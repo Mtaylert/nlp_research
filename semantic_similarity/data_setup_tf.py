@@ -66,7 +66,11 @@ def ecode_data(df):
 if __name__ == '__main__':
     df = load_data()
 
+
     train = df[df["partition"] == "train"]
+    train[['sentence_1','sentence_2','similarity']].to_csv('semantic_sim.csv',index=False)
+    #print(train.columns)
+    '''
     train = train.sample(n=200)
     train = train.reset_index(drop=True)
 
@@ -95,4 +99,6 @@ if __name__ == '__main__':
                   metrics=['accuracy'])
     bert_history = model.fit(train_setup, epochs=number_of_epochs, validation_data=test_setup)
     predictions = model.predict(test_setup)
+    model.save_pretrained("TFModel", saved_model=True)
     print(predictions)
+    '''

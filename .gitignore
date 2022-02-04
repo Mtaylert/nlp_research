@@ -1,7 +1,7 @@
 toxic_comments/competition_models/*
 Regression_Modeling/LSTM/saved_models/*
 toxic_comments/roberta-base/
-
+semantic_similarity/TFModel/
 toxic_comments/Exotic_Models/LSTM/embeddings/*
 
 
