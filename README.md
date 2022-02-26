@@ -1,6 +1,6 @@
 # Applied NLP Research
 
-This project is meant to showcase different NLP use cases with the latest and greatest tools including Transformers, SpaCy, Pytorch, and more. 
+Project is meant to showcase different NLP use cases with the latest and greatest tools including Transformers, SpaCy, Pytorch, and more. 
 
 ## Use Cases
   - [Named Entity Recognition](https://github.com/Mtaylert/nlp_research/tree/master/entity_recognition)
