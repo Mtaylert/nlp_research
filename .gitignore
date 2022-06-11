@@ -21,3 +21,6 @@ question_answering/DistilBERTQA/input/*
 multimodal/data
 text_generation/data/*
 Regression_Modeling/LSTM/saved_models/
+
+speech2text/audio_files/*
+speech2text/wav2vec2_1/*
