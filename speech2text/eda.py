@@ -10,4 +10,19 @@ print("TF version:", tf.__version__)
 AUDIO_MAXLEN = 246000
 LABEL_MAXLEN = 256
 BATCH_SIZE = 2
-pretrained_layer = hub.KerasLayer("wav2vec2_1/", trainable=True)
+
+run = 0
+if run ==1:
+  os.environ["TFHUB_CACHE_DIR"] = "/content/gdrive/MyDrive/SST/temp_model"
+  hub.KerasLayer("https://tfhub.dev/vasudevgupta7/wav2vec2/1") 
+
+pretrained_layer = hub.KerasLayer(hub.load('wav2vec2_1/'), trainable=True)
+
+inputs = tf.keras.Input(shape=(AUDIO_MAXLEN,))
+hidden_states = pretrained_layer(inputs)
+outputs = tf.keras.layers.Dense(config.vocab_size)(hidden_states)
+
+model = tf.keras.Model(inputs=inputs, outputs=outputs)
+model(tf.random.uniform(shape=(BATCH_SIZE, AUDIO_MAXLEN)))
+
+model.summary()
