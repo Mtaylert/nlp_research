@@ -14,7 +14,7 @@ BATCH_SIZE = 2
 run = 0
 if run ==1:
   os.environ["TFHUB_CACHE_DIR"] = "/content/gdrive/MyDrive/SST/temp_model"
-  hub.KerasLayer("https://tfhub.dev/vasudevgupta7/wav2vec2/1") 
+  hub.KerasLayer("https://tfhub.dev/vasudevgupta7/wav2vec2/1")
 
 pretrained_layer = hub.KerasLayer(hub.load('wav2vec2_1/'), trainable=True)
 
@@ -26,3 +26,10 @@ model = tf.keras.Model(inputs=inputs, outputs=outputs)
 model(tf.random.uniform(shape=(BATCH_SIZE, AUDIO_MAXLEN)))
 
 model.summary()
+
+from wav2vec2 import CTCLoss
+
+LEARNING_RATE = 5e-5
+
+loss_fn = CTCLoss(config, (BATCH_SIZE, AUDIO_MAXLEN), division_factor=BATCH_SIZE)
+optimizer = tf.keras.optimizers.Adam(LEARNING_RATE)
