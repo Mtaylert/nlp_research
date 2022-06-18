@@ -1,3 +1,4 @@
+speech2text/resampled_audio/*
 toxic_comments/competition_models/*
 Regression_Modeling/LSTM/saved_models/*
 toxic_comments/roberta-base/

@@ -18,6 +18,6 @@ def resample_audio(adjusted_sample_rate, audio_path):
 
 
 if __name__ == "__main__":
-    # resample_audio(adjusted_sample_rate=16000, audio_path='audio_files/')
-    sampling_rate, data = wavfile.read("resampled_audio/re_LJ001-0001.wav")
-    print(np.array(data))
+    resample_audio(adjusted_sample_rate=16000, audio_path='audio_files/')
+    #sampling_rate, data = wavfile.read("resampled_audio/re_LJ001-0001.wav")
+    #print(np.array(data))
