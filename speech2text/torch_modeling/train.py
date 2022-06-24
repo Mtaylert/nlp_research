@@ -6,7 +6,7 @@ import numpy as np
 from transformers import Wav2Vec2ForCTC
 from transformers import TrainingArguments
 from transformers import Trainer
-
+from sklearn.model_selection import train_test_split
 
 def compute_metrics(pred):
     wer_metric = load_metric("wer")
@@ -50,18 +50,13 @@ def run():
     )
     data_collator = modeling.DataCollatorCTCWithPadding(processor=config.PROCESSOR, padding=True, max_length_labels=32)
     df = data_setup.text_preprocessing("../text_transcription/metadata.csv")
-    sst = data_setup.SSTDataset(text=df['Transcription'], audio=df['wav_array'])
-    trainer = Trainer(
-        model=model,
-        data_collator=data_collator,
-        args=training_args,
-        compute_metrics=compute_metrics,
-        train_dataset=sst,
-        eval_dataset=sst,
-        tokenizer=config.PROCESSOR.feature_extractor,
-    )
+    train_df, test_df = train_test_split(df, test_size=0.1, random_state=101)
 
-    trainer.train()
+    train_df = train_df[["path", "Transcription"]]
+    train_df = train_df.reset_index(drop=True)
+
+    test_df = test_df[["path", "Transcription"]]
+    test_df = test_df.reset_index(drop=True)
 
 
 if __name__ == '__main__':
