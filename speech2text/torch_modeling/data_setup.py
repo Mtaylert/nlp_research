@@ -22,11 +22,11 @@ def text_preprocessing(path):
     df = pd.read_csv(path, sep="|", header=None)
     df = df[[0, 1]]
     df.columns = ["ID", "Transcription"]
-    files = os.listdir('/content/gdrive/MyDrive/Torch_SST/resampled_audio/')
+    files = os.listdir('../resampled_audio/')
     df["Transcription"] = df["Transcription"].apply(remove_special_characters)
     df["wav_file"] = df["ID"].apply(lambda x: "re_{}.wav".format(x))
     df=df[df['wav_file'].isin(files)]
-    df["path"] = df["ID"].apply(lambda x: "/content/gdrive/MyDrive/Torch_SST/resampled_audio/re_{}.wav".format(x))
+    df["path"] = df["ID"].apply(lambda x: "../resampled_audio/re_{}.wav".format(x))
     return df[['ID','Transcription','path']]
 
 def extract_all_chars(batch):

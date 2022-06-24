@@ -26,28 +26,6 @@ def compute_metrics(pred):
 
 
 def run():
-    model = Wav2Vec2ForCTC.from_pretrained(
-        "facebook/wav2vec2-base",
-        ctc_loss_reduction="mean",
-        pad_token_id=config.PROCESSOR.tokenizer.pad_token_id,
-    )
-    model.freeze_feature_extractor()
-    training_args = TrainingArguments(
-        output_dir='outputs/',
-        group_by_length=True,
-        per_device_train_batch_size=16,
-        evaluation_strategy="steps",
-        num_train_epochs=2,
-        fp16=False,
-        gradient_checkpointing=True,
-        save_steps=50,
-        eval_steps=50,
-        logging_steps=500,
-        learning_rate=1e-4,
-        weight_decay=0.005,
-        save_total_limit=2,
-        disable_tqdm=False,
-    )
     data_collator = modeling.DataCollatorCTCWithPadding(processor=config.PROCESSOR, padding=True, max_length_labels=32)
     df = data_setup.text_preprocessing("../text_transcription/metadata.csv")
     train_df, test_df = train_test_split(df, test_size=0.1, random_state=101)
@@ -57,7 +35,11 @@ def run():
 
     test_df = test_df[["path", "Transcription"]]
     test_df = test_df.reset_index(drop=True)
-
+    train_df.to_csv("outputs/train.csv", sep="\t", encoding="utf-8", index=False)
+    test_df.to_csv("outputs/test.csv", sep="\t", encoding="utf-8", index=False)
+    common_voice_train = load_dataset("csv", data_files={"train": "outputs/train.csv"}, delimiter="\t")["train"]
+    common_voice_test = load_dataset("csv", data_files={"test": "outputs/test.csv"}, delimiter="\t")["test"]
+    print(common_voice_test)
 
 if __name__ == '__main__':
     run()
