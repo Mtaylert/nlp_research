@@ -9,3 +9,5 @@ Project is meant to showcase different NLP use cases with the latest and greates
   - [Text Generation](https://github.com/Mtaylert/nlp_research/tree/master/text_generation/Markov_Model)
   - Extractive and Abstractive Summarization
   - Conversational AI
+  - TTS
+  - ASR
